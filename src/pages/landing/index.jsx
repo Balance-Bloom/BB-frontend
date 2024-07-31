@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import Skeleton from "../../components/Skeleton";
 
 const LandingPage = () => {
-  return <div>LandingPage</div>;
+  return <>Landing</>;
 };
 
 export default LandingPage;
