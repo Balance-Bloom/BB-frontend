@@ -8,6 +8,10 @@ export default {
         fuschia: "#C03882",
         pink: "#FFCFDB",
         coral: "#ECA4B0",
+        daisy: "#faf7f5",
+      },
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(180deg, #ffd6e7, #ffecf2)",
       },
     },
   },
