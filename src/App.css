@@ -1,0 +1,38 @@
+.transition {
+  transition: 0.2s ease-in-out;
+}
+
+.placeholder-style::placeholder {
+  margin-top: 4px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 8px;
+  transition: 0.5s;
+  letter-spacing: 3px;
+}
+
+.hero-image {
+  background-image: url(assets/images/new-uterus.jpeg);
+  height: 100vh;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+}
+
+.journal-hero {
+  background-image: url(./assets/svg/design.svg);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.highlight-cycle-day {
+  background: #ffcfdb !important;
+  color: white !important;
+  border-radius: 50%;
+}
