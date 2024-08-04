@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../App.css";
 import { Link } from "react-router-dom";
-import Heart from "../../assets/svg/heart.svg";
+import Heart from "../../assets/svg/love2.svg";
 import NavBar from "../../components/NavBar";
 import InputForm from "../../components/InputForm";
+import { useForm } from "react-hook-form";
+import { Loader } from "lucide-react";
 
 const LogIn = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = (data) => console.log(data);
+
   return (
     <>
       <NavBar />
@@ -15,7 +27,10 @@ const LogIn = () => {
           <div className="w-24">
             <img src={Heart} alt="heart-image" />
           </div>
-          <form className="flex flex-col box-border gap-5 w-full">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col box-border gap-5 w-full"
+          >
             <div className="relative w-full">
               <InputForm type="text" placeholder="Email or Username" />
             </div>
@@ -36,8 +51,11 @@ const LogIn = () => {
                 </span>
               </Link>
             </p>
-            <button className="px-4 py-1 border-2 w-24 self-center border-black bg-lilac/50 rounded-lg uppercase text-xs tracking-wide transition-all hover:bg-black hover:text-white">
-              SUBMIT
+            <button
+              type="submit"
+              className="px-4 py-1 border-2 w-24 self-center border-black bg-lilac/50 rounded-lg uppercase text-xs tracking-wide transition-all hover:bg-black hover:text-white"
+            >
+              {isSubmitting ? <Loader /> : "SUBMIT"}
             </button>
             <div className="flex w-full flex-col border-opacity-50">
               <div className="divider">OR</div>

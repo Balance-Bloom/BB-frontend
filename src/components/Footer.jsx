@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-center bg-[#EFEAE6] text-primary-content p-10">
+      <footer className="footer footer-center bg-pink/45 text-primary-content p-10">
         <aside>
           <svg
             width="50"

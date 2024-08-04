@@ -9,6 +9,7 @@ export default {
         pink: "#FFCFDB",
         coral: "#ECA4B0",
         daisy: "#faf7f5",
+        subheader: "#a9a9a9",
       },
       backgroundImage: {
         "custom-gradient": "linear-gradient(180deg, #ffd6e7, #ffecf2)",

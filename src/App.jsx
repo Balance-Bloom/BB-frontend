@@ -6,6 +6,9 @@ import ForgotPassword from "./pages/auth/ForgotPassword";
 import SignUp from "./pages/auth/SignUp";
 import UserPage from "./pages/user";
 import ForumPage from "./pages/forum";
+import Journal from "./pages/journal";
+import ViewEntries from "./components/ViewEntries";
+import JournalEntryCard from "./components/JournalEntryCard";
 
 function App() {
   const router = createBrowserRouter([
@@ -32,6 +35,18 @@ function App() {
     {
       path: "/forum",
       element: <ForumPage />,
+    },
+    {
+      path: "/journal",
+      element: <Journal />,
+    },
+    {
+      path: "/journall",
+      element: <JournalEntryCard />,
+    },
+    {
+      path: "/view",
+      element: <ViewEntries />,
     },
   ]);
 
