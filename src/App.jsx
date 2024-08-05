@@ -9,6 +9,7 @@ import ForumPage from "./pages/forum";
 import Journal from "./pages/journal";
 import ViewEntries from "./components/ViewEntries";
 import JournalEntryCard from "./components/JournalEntryCard";
+import SypmtomsPage from "./pages/user/pages/SypmtomsPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -47,6 +48,10 @@ function App() {
     {
       path: "/view",
       element: <ViewEntries />,
+    },
+    {
+      path: "/log-symptom",
+      element: <SypmtomsPage />,
     },
   ]);
 
