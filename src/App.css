@@ -42,3 +42,33 @@
   background-image: url(./assets/svg/wave.svg);
   background-size: 1000px 100px;
 }
+
+/* Add this to your CSS file */
+.day {
+  flex: 0 0 auto;
+  width: 120px; /* Adjust width as needed */
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.nav-button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+}

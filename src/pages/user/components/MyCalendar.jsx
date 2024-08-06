@@ -10,7 +10,7 @@ const MyCalendar = () => {
           <h1>Current cycle:</h1>
           <p className="text-2xl font-semibold">Day 20</p>
           <p>Low chance of getting pregnant</p>
-          <button className="bg-lilac px-4 rounded-full">Log period</button>
+          <button className="bg-lilac/50 px-4 rounded-full">Log period</button>
         </div>
       </div>
     </div>

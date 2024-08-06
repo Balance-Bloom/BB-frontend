@@ -7,6 +7,7 @@ export default {
         lilac: "#C1AFE3",
         fuschia: "#C03882",
         pink: "#FFCFDB",
+        deepPink: "#FF5A7D",
         coral: "#ECA4B0",
         daisy: "#faf7f5",
         subheader: "#a9a9a9",
