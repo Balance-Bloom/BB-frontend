@@ -1,5 +1,9 @@
 import React from "react";
-import TrackerImage from "../../../assets/images/period-tracking.jpg";
+import TrackerImage from "../../../assets/vectors/calendar.jpg";
+import DiaryImage from "../../../assets/vectors/diary.jpg";
+import HealthInsightImage from "../../../assets/vectors/heartbeat.jpg";
+import SymptomImage from "../../../assets/images/symptom.jpg";
+import ForumImage from "../../../assets/images/forum.jpg";
 
 const Features2 = () => {
   return (
@@ -19,9 +23,9 @@ const Features2 = () => {
           </div>
           <div className="feature">
             <img
-              src="path/to/icon2.svg"
+              src={SymptomImage}
               alt="Feature Icon"
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-1/2 mx-auto mb-4"
             />
             <h2 className="text-2xl font-bold mb-2">Symptom Logging</h2>
             <p className="text-md">
@@ -30,9 +34,9 @@ const Features2 = () => {
           </div>
           <div className="feature">
             <img
-              src="path/to/icon3.svg"
+              src={HealthInsightImage}
               alt="Feature Icon"
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-1/2 mx-auto mb-4"
             />
             <h2 className="text-2xl font-bold mb-2">Health Insights</h2>
             <p className="text-md">
@@ -41,9 +45,9 @@ const Features2 = () => {
           </div>
           <div className="feature">
             <img
-              src="path/to/icon3.svg"
+              src={DiaryImage}
               alt="Feature Icon"
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-1/3 mx-auto mb-4"
             />
             <h2 className="text-2xl font-bold mb-2">Journaling</h2>
             <p className="text-md">
@@ -63,9 +67,9 @@ const Features2 = () => {
           </div>
           <div className="feature">
             <img
-              src="path/to/icon3.svg"
+              src={ForumImage}
               alt="Feature Icon"
-              className="w-16 h-16 mx-auto mb-4"
+              className="w-1/2 mx-auto mb-4"
             />
             <h2 className="text-2xl font-bold mb-2">Forum</h2>
             <p className="text-md">

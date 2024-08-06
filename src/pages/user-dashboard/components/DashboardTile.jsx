@@ -1,7 +1,12 @@
 import React from "react";
 
-const DashboardTile = () => {
-  return <div>DashboardTile</div>;
+const DashboardTile = ({ styles, headerText, children }) => {
+  return (
+    <div className={`${styles}`}>
+      <p>{headerText}</p>
+      <div>{children}</div>
+    </div>
+  );
 };
 
 export default DashboardTile;

@@ -10,6 +10,7 @@ export default {
         deepPink: "#FF5A7D",
         coral: "#ECA4B0",
         daisy: "#faf7f5",
+        bgColor: "#F6F6F6",
         subheader: "#a9a9a9",
       },
       backgroundImage: {

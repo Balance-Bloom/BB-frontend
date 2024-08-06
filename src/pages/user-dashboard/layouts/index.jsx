@@ -9,9 +9,11 @@ const DashboardLayout = () => {
       <div>
         <Sidebar />
       </div>
-      <div className="w-full overflow-y-auto pl-3">
+      <div className="w-full overflow-y-auto">
         <NavBar />
-        <Outlet />
+        <div className="bg-bgColor pt-3">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

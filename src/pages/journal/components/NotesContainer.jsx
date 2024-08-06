@@ -5,7 +5,7 @@ import Notes from "./Notes";
 
 const NotesContainer = () => {
   return (
-    <div className="bg-daisy w-4/5 h-screen rounded-l-lg">
+    <div className="bg-bgColor w-4/5 h-screen rounded-l-lg">
       <div className="ml-6">
         <h1 className="text-2xl">Recent Folders</h1>
         <div className="flex gap-8">
