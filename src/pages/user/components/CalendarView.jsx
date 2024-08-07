@@ -13,9 +13,7 @@ const CalendarView = () => {
         <h2 className="text-2xl font-bold">Current Cycle:</h2>
         <p className="text-xl">Day {cycleDay}</p>
         <p className="text-gray-600">High chance of getting pregnant</p>
-        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg">
-          Log period
-        </button>
+        <button className="mt-4 px-4 py-2 rounded-lg">Log period</button>
       </div>
     </div>
   );

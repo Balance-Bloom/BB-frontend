@@ -48,7 +48,7 @@ const ForgotPassword = () => {
 
             <div>
               <InputForm
-                type="text"
+                type="password"
                 placeholder="New Password"
                 {...register("newPassword", { required: true })}
               />
@@ -59,7 +59,7 @@ const ForgotPassword = () => {
 
             <div>
               <InputForm
-                type="text"
+                type="password"
                 placeholder="Confirm New Password"
                 {...register("confirmPassword", { required: true })}
               />

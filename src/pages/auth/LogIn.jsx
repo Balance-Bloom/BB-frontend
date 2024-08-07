@@ -35,7 +35,7 @@ const LogIn = () => {
               <InputForm type="text" placeholder="Email or Username" />
             </div>
             <div className="relative w-full">
-              <InputForm type="text" placeholder="Password" />
+              <InputForm type="password" placeholder="Password" />
             </div>
             <Link
               to="/recovery"
