@@ -45,10 +45,7 @@ function App() {
       path: "/journal",
       element: <Journal />,
     },
-    {
-      path: "/journall",
-      element: <JournalEntryCard />,
-    },
+
     {
       path: "/view",
       element: <ViewEntries />,

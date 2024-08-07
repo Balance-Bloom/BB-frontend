@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ border }) => {
+const NavBar = ({ border, navLink1, navLink2, navLink3 }) => {
   return (
     <div className={`navbar bg-base-100 ${border}`}>
       <div className="flex-1">
@@ -25,16 +25,13 @@ const NavBar = ({ border }) => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </Link>
+              <Link className="justify-between">{navLink1}</Link>
             </li>
             <li>
-              <Link>Settings</Link>
+              <Link>{navLink2}</Link>
             </li>
             <li>
-              <Link>Logout</Link>
+              <Link>{navLink3}</Link>
             </li>
           </ul>
         </div>
