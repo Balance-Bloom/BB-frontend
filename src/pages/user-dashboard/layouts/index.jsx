@@ -11,7 +11,7 @@ const DashboardLayout = () => {
       </div>
       <div className="w-full overflow-y-auto">
         <NavBar />
-        <div className="bg-bgColor pt-3">
+        <div className="bg-bgColor pl-3 h-screen">
           <Outlet />
         </div>
       </div>

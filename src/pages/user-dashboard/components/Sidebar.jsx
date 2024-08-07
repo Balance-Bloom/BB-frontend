@@ -11,7 +11,7 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className=" ml-3 text-black flex flex-col relative h-screen overflow-y-hidden overflow-x-hidden w-16 hover:w-52 transition-width"
+        className=" ml-3 text-black flex flex-col relative h-screen overflow-y-hidden overflow-x-hidden w-52"
         style={{ boxShadow: "10px 0 #FF5A7D" }}
       >
         <div className="flex flex-col mt-4">
@@ -20,18 +20,17 @@ const Sidebar = () => {
               <NavLink
                 key={index}
                 to={item.path}
-                id="nav"
                 className={` flex items-center hover:shadow-lg 
                         
                         ${
                           currentPath == item.path &&
-                          "bg-primary text-white rounded-l-[20px]"
+                          "bg-deepPink text-white rounded-l-[20px]"
                         }`}
               >
                 <span className="relative text-center pl-4 min-w-14">
                   {item.Icon}
                 </span>
-                <span className="relative pl-2 w-full whitespace-nowrap leading-[40px]">
+                <span className="relative w-full whitespace-nowrap leading-[40px]">
                   {item.name}
                 </span>
               </NavLink>

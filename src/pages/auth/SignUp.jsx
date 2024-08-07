@@ -70,7 +70,7 @@ const SignUp = () => {
 
         <div className="flex-column">
           <InputForm
-            type="text"
+            type="password"
             placeholder="Password"
             {...register("password", { required: true })}
           />

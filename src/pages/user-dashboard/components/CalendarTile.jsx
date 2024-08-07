@@ -20,24 +20,24 @@ const CalendarTile = () => {
             <ArrowRight />
           </p>
           <div className="flex flex-col gap-3">
-            <p className="text-red-600 text-sm">
+            <p className="text-fuchsia-600 text-sm">
               <Droplet
                 // width={20}
-                className="text-red-600 inline bg-red-200 rounded-[100%] p-1 mr-3"
+                className="text-fuchsia-600 inline bg-fuchsia-200 rounded-[100%] p-1 mr-3"
               />
               Menstruation
             </p>
-            <p className="text-green-600 text-sm">
+            <p className="text-deepPink text-sm">
               <LocalFireDepartment
                 // width={20}
-                className="text-green-600 inline bg-green-200 rounded-[100%] p-1 mr-3"
+                className="text-deepPink inline bg-pink rounded-[100%] p-1 mr-3"
               />
               Ovulation
             </p>
-            <p className="text-blue-600 text-sm">
+            <p className="text-coral text-sm">
               <CalendarDateRangeIcon
                 width={25}
-                className="text-blue-600 inline bg-blue-200 rounded-[100%] p-1 mr-3"
+                className="text-coral inline bg-coral/50 rounded-[100%] p-1 mr-3"
               />
               New cycle
             </p>

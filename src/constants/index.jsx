@@ -14,39 +14,19 @@ const D = {
       Icon: <UserIcon width={20} height={20} />,
     },
     {
-      name: "Bio",
-      path: "bio",
+      name: "Mood and symptoms",
+      path: "log-symptom",
       Icon: <UserIcon width={20} height={20} />,
     },
     {
-      name: "Education",
-      path: "education",
+      name: "Period history",
+      path: "period-history",
       Icon: <GraduationCapIcon width={20} height={20} />,
     },
     {
-      name: "Licenses",
+      name: "Track pregnancy",
       path: "licenses",
       Icon: <CreditCardIcon width={20} height={20} />,
-    },
-    {
-      name: "Skills",
-      path: "skills",
-      Icon: <HomeIcon width={20} height={20} />,
-    },
-    {
-      name: "Experiences",
-      path: "experiences",
-      Icon: <CalendarIcon width={20} height={20} />,
-    },
-    {
-      name: "Projects",
-      path: "projects",
-      Icon: <Medal width={20} height={20} />,
-    },
-    {
-      name: "Achievements",
-      path: "achievements",
-      Icon: <Medal width={20} height={20} />,
     },
   ],
 };

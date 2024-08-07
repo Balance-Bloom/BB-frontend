@@ -8,12 +8,11 @@ const ForumFirstSec = () => {
     <div className="flex flex-col gap-9 items-center py-24">
       <ForumCards
         avatar={<Avatar />}
-        headerText="Weight Journey"
-        children={
-          <p className="text-lg text-white ">
-            Intermittent Fasting: Share your experience
-          </p>
-        }
+        headerText="Family Planning"
+        postHeading="Contraceptive use: Share your experience"
+        likes={<p className="text-sm">3.7K</p>}
+        comments={<p className="text-sm">2.8K</p>}
+        saves={<p className="text-sm">1.2K</p>}
       />
       <ForumCards />
       <ForumCards />

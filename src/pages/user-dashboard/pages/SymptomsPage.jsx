@@ -1,6 +1,5 @@
 import React from "react";
 import SymptomTile from "../../../components/SymptomTile";
-import { SmilePlusIcon } from "lucide-react";
 
 const SypmtomsPage = () => {
   return (
