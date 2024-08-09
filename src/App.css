@@ -38,9 +38,12 @@
   border-radius: 50%;
 }
 
-.wave-img {
-  background-image: url(./assets/svg/wave.svg);
-  background-size: 1000px 100px;
+.bg-auth {
+  background-image: url(./assets/images/possible-bg.webp);
+  height: 100vh;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed;
 }
 
 /* Add this to your CSS file */

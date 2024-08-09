@@ -4,6 +4,7 @@ import PeriodStats from "./components/PeriodStats";
 import MyCalendar from "./components/MyCalendar";
 import NavBar from "../../components/NavBar";
 import Insights from "./components/Insights";
+import Articles from "./components/Articles";
 
 const UserPage = () => {
   return (
@@ -20,6 +21,7 @@ const UserPage = () => {
         </div>
         <div className="m-auto">
           <Insights />
+          <Articles />
         </div>
       </div>
     </>
