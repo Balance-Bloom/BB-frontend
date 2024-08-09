@@ -1,4 +1,5 @@
 import React from "react";
+import BasicForm from "./BasicForm";
 
 const AddPeriodModal = ({
   modalButtonAction,
@@ -10,34 +11,31 @@ const AddPeriodModal = ({
     <div>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       <button
-        className="px-1 text-sm py-3 w-24 self-center bg-lilac/50 rounded-lg uppercase font-medium tracking-wide transition-all hover:bg-black hover:text-white"
+        className="px-4 bg-deepPink hover:text-white text-sm py-3  self-center rounded-lg uppercase font-medium tracking-wide transition-all hover:bg-black "
         onClick={() => document.getElementById("my_modal_5").showModal()}
       >
         {buttonText || "Open Modal"}
       </button>
+
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">{modalHeading}</h3>
+          <h3 className="font-bold text-lg mb-5">{modalHeading}</h3>
           <p className="py-4">
-            <form action="" className="flex flex-col items-center">
-              <label htmlFor="date" className="sr-only">
-                Select Date
-              </label>
-              <input
-                type="date"
-                id="date"
-                className="border-[0.5px] w-60 rounded-md p-2"
-              />
+            <form action="" className="flex flex-col">
+              <BasicForm labelName={<p>Start Date</p>} inputType="date" />
+              <BasicForm labelName={<p>End Date</p>} inputType="date" />
             </form>
           </p>
           <div className="modal-action flex justify-between">
             <button
-              className="btn"
+              className="btn w-32"
               onClick={() => document.getElementById("my_modal_5").close()}
             >
               Cancel
             </button>
-            <button className="btn">{submitButton || "Add new"}</button>
+            <button className="btn bg-deepPink w-32">
+              {submitButton || "Add new"}
+            </button>
           </div>
         </div>
       </dialog>

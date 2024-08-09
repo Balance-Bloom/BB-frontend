@@ -4,7 +4,7 @@ const Button = ({ buttonText, styles, onClick }) => {
   return (
     <div className="flex justify-center">
       <button
-        className={`${styles} px-4 py-1 w-24 bg-lilac/50 rounded-lg uppercase text-xs tracking-wide transition-all hover:bg-black hover:text-white`}
+        className={`${styles} px-4 py-1 w-24 bg-deepPink rounded-lg uppercase text-xs tracking-wide transition-all hover:bg-black hover:text-white`}
         onClick={onClick}
       >
         {buttonText}

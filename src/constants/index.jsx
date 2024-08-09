@@ -29,6 +29,28 @@ const D = {
       Icon: <CreditCardIcon width={20} height={20} />,
     },
   ],
+  SYMPTOMS: [
+    {
+      id: 1,
+      emoji: "🤒",
+      name: "Fever",
+    },
+    {
+      id: 2,
+      emoji: "🤕",
+      name: "Headache",
+    },
+    {
+      id: 3,
+      emoji: "🤧",
+      name: "Sneezing",
+    },
+    {
+      id: 4,
+      emoji: "😴",
+      name: "Fatigue",
+    },
+  ],
 };
 
 export default D;

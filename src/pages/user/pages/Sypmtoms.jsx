@@ -4,6 +4,7 @@ import NavBar from "../../../components/NavBar";
 import { SmileIcon } from "lucide-react";
 import { FaceFrownIcon } from "@heroicons/react/24/outline";
 import MyCalendar from "../components/MyCalendar";
+import MaterialCalendar from "../components/MaterialCalendar";
 
 const Sypmtoms = () => {
   return (
@@ -84,7 +85,7 @@ const Sypmtoms = () => {
           />
         </div>
         <div className="">
-          <MyCalendar />
+          <MaterialCalendar />
         </div>
       </div>
     </>

@@ -1,5 +1,4 @@
 import React from "react";
-import CalendarView from "./components/CalendarView";
 import PeriodStats from "./components/PeriodStats";
 import MyCalendar from "./components/MyCalendar";
 import NavBar from "../../components/NavBar";
@@ -10,7 +9,7 @@ const UserPage = () => {
   return (
     <>
       <NavBar border="shadow-md" />
-      <div>
+      <div className="">
         <div className="grid justify-center grid-cols-3 w-11/12 max-w-7xl mx-auto gap-4">
           <div className="col-span-2 ">
             <MyCalendar />

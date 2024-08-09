@@ -13,9 +13,9 @@ const MyCalendar = () => {
           <p className="text-2xl font-semibold">Day 20</p>
           <p>Low chance of getting pregnant</p>
           <AddPeriodModal
+            modalHeading="Log your period"
             buttonText={<p>Log period</p>}
             submitButton="Add"
-            modalHeading="Add new period"
           />
         </div>
       </div>

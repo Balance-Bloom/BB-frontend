@@ -9,7 +9,7 @@ const PeriodStats = () => {
   return (
     <>
       <h1>My cycles</h1>
-      <div className="bg-pink/50 rounded-lg shadow-md w-80 p-3">
+      <div className=" rounded-lg bg-white shadow-md w-80 p-3">
         <div className="mb-5">
           <StatsInfo />
           <StatsInfo />
