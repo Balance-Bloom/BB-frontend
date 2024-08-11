@@ -9,10 +9,10 @@ const NavBar = ({}) => {
         <div className="w-[8%]">
           <img src={Logo} alt="" />
         </div>
-        <div className="flex gap-3 text-base">
-          <Link className="">Home</Link>
-          <Link>My Insights</Link>
-          <Link>Articles</Link>
+        <div className="flex gap-3 text-base ">
+          <Link className="hover:text-deepPink">Home</Link>
+          <Link className="hover:text-deepPink">My Insights</Link>
+          <Link className="hover:text-deepPink">Articles</Link>
         </div>
       </nav>
     </div>

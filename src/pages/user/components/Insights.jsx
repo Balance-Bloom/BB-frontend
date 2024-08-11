@@ -4,17 +4,13 @@ import LogSymptomModal from "./LogSymptomModal";
 
 const Insights = () => {
   return (
-    <div className="p-24">
-      <h1 className="font-sans font-semibold mb-4">My Insights . Today</h1>
-      <div className="flex justify-center gap-5">
+    <div className="">
+      <h1 className="font-sans font-semibold mb-4">
+        How are you feeling today
+      </h1>
+      <div className="flex flex-row">
         <InsightCard heading="Log your Symptoms" icon={<LogSymptomModal />} />
-        <InsightCard />
-        <InsightCard />
-        <InsightCard />
-        <InsightCard />
-        <InsightCard />
-
-        <InsightCard />
+        <InsightCard heading="Log your Mood" icon={<LogSymptomModal />} />
       </div>
     </div>
   );

@@ -11,16 +11,16 @@ import { CalendarDateRangeIcon } from "@heroicons/react/20/solid";
 const CalendarTile = () => {
   return (
     <DashboardTile
-      styles=" w-44 rounded-l-[6px] shadow-xl bg-white shadow-lg"
+      styles=" w-56 h-[400px] rounded-l-[6px] shadow-md bg-white shadow-lg flex flex-col items-center gap-7 pt-3 "
       children={
-        <div className="flex flex-col justify-center items-center gap-7 pt-3 ">
+        <div className="">
           <p>
             <ArrowLeft />
             February 2018
             <ArrowRight />
           </p>
           <div className="flex flex-col gap-3">
-            <p className="text-fuchsia-600 text-sm">
+            <p className="w-text-fuchsia-600 text-sm">
               <Droplet
                 // width={20}
                 className="text-fuchsia-600 inline bg-fuchsia-200 rounded-[100%] p-1 mr-3"
