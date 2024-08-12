@@ -1,4 +1,5 @@
-import React from "react";
+import moment from "moment";
+import React, { useState } from "react";
 import {
   CircularProgressbarWithChildren,
   buildStyles,
@@ -6,12 +7,26 @@ import {
 import "react-circular-progressbar/dist/styles.css";
 
 const CircularProgressBar = () => {
-  const value = 28;
+  const [value, onChange] = useState(new Date());
+  const [cycle, cycleValue] = useState("28");
+  const cycleLength = parseInt(cycle);
+
+  // Calculate the next period date
+  const nextPeriodDate = moment(value)
+    .add(cycleLength, "days")
+    .format("Do MMMM YYYY");
+
+  // Calculate the current day in the cycle (starting from 1)
+  const currentDay =
+    moment(value).diff(moment(value).startOf("day"), "days") + 1;
+
+  // Calculate progress percentage
+  const percentage = (currentDay / cycleLength) * 100;
 
   return (
     <div style={{ width: 300, height: 300 }}>
       <CircularProgressbarWithChildren
-        value={value}
+        value={percentage}
         styles={buildStyles({
           trailColor: "#FFCFDB",
           pathColor: "#FF6F91",
@@ -31,17 +46,24 @@ const CircularProgressBar = () => {
               fontSize: "14px",
             }}
           >
-            Today, Day {value}
+            Today,{" "}
+            <span className="text-sm font-normal">
+              {moment().format("MMM Do")}
+            </span>
           </p>
-          <p
+          <div
             style={{
               textAlign: "center",
               fontWeight: "bolder",
               fontSize: "19px",
             }}
           >
-            Your next period is <br /> due in {value} days
-          </p>
+            {/* <p>Next Period</p> */}
+            <p>
+              more days until <br /> next period
+            </p>
+            <p>Day, {currentDay}</p>
+          </div>
         </div>
       </CircularProgressbarWithChildren>
     </div>

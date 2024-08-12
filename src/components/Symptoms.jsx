@@ -1,12 +1,10 @@
 import React from "react";
-import SymptomTile from "../../../components/SymptomTile";
-import NavBar from "../../../components/NavBar";
-import { SmileIcon } from "lucide-react";
+import SymptomTile from "../components/SymptomTile";
+import NavBar from "../components/NavBar";
 import { FaceFrownIcon } from "@heroicons/react/24/outline";
-import MyCalendar from "../components/MyCalendar";
 import MaterialCalendar from "../components/MaterialCalendar";
 
-const Sypmtoms = () => {
+const Symptoms = () => {
   return (
     <>
       <NavBar />
@@ -92,4 +90,4 @@ const Sypmtoms = () => {
   );
 };
 
-export default Sypmtoms;
+export default Symptoms;

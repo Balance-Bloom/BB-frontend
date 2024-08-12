@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../../../App.css";
-import D from "../../../constants";
+import "../App.css";
+import D from "../constants/index";
 import { Link } from "react-router-dom";
 
 const Articles = () => {

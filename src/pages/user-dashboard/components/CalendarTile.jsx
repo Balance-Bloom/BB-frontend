@@ -7,7 +7,7 @@ import {
 } from "@mui/icons-material";
 import { Droplet } from "lucide-react";
 import { CalendarDateRangeIcon } from "@heroicons/react/20/solid";
-import AddPeriodModal from "../../user/components/AddPeriodModal";
+import AddPeriodModal from "../../../components/AddPeriodModal";
 
 const CalendarTile = () => {
   return (

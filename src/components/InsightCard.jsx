@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  ArrowRight,
-  ArrowLeft,
-  LocalFireDepartment,
-} from "@mui/icons-material";
-import { Droplet, SmileIcon } from "lucide-react";
+import { SmileIcon } from "lucide-react";
 import { CalendarDateRangeIcon } from "@heroicons/react/20/solid";
-
-import LogSymptomModal from "../pages/user/components/LogSymptomModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVenusMars } from "@fortawesome/free-solid-svg-icons/faVenusMars";
 

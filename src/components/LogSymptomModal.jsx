@@ -1,6 +1,6 @@
 import { PlusCircleIcon } from "@heroicons/react/20/solid";
 import React, { useState } from "react";
-import D from "../../../constants";
+import D from "../constants/index";
 
 const LogSymptomModal = () => {
   const [selectedSymptom, setSelectedSymptom] = useState(null);

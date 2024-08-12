@@ -20,12 +20,12 @@ const AddPeriodModal = ({
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           <h3 className="font-bold text-lg mb-5">{modalHeading}</h3>
-          <p className="py-4">
+          <div className="py-4">
             <form action="" className="flex flex-col">
               <BasicForm labelName={<p>Start Date</p>} inputType="date" />
               <BasicForm labelName={<p>End Date</p>} inputType="date" />
             </form>
-          </p>
+          </div>
           <div className="modal-action flex justify-between">
             <button
               className="btn w-32"

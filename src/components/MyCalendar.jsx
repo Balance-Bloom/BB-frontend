@@ -1,26 +1,31 @@
+import moment from "moment";
 import React, { useState } from "react";
-import Calendar from "react-calendar";
-import AddPeriodModal from "./AddPeriodModal";
-import Moment from "react-moment";
-// import moment from "moment";
+import "../App.css";
 
 const MyCalendar = () => {
   const [value, onChange] = useState(new Date());
-  const [cycle, CycleValue] = useState("28");
-
-  const date = value; // Ensure this is a valid Date object
-  console.log(cycle);
+  const [cycle, cycleValue] = useState("28");
 
   const cycleLength = parseInt(cycle);
+
+  // Calculate next period date
+  const nextPeriodDate = moment(value)
+    .add(cycleLength, "days")
+    .format("Do MMMM YYYY");
+
+  // Calculate approximate ovulation day
+  const ovulationDay = moment(value)
+    .add(cycleLength - 14, "days")
+    .format("Do MMMM YYYY");
 
   return (
     <div className="bg-white rounded-lg shadow-md mt-7 pb-9">
       <div className="w-full min-w-80">
-        <label htmlFor="cycleLength">Select your cycle length</label>
+        <label htmlFor="">Select your cycle length</label>
         <select
-          onChange={(e) => CycleValue(e.target.value)}
-          defaultValue={cycle}
           className="m-2"
+          onChange={(e) => cycleValue(e.target.value)}
+          defaultValue={cycle}
         >
           <option value="28">28</option>
           <option value="29">29</option>
@@ -41,47 +46,33 @@ const MyCalendar = () => {
           <option value="44">44</option>
           <option value="45">45</option>
         </select>
-        <p className="text-center">
-          Select Your Last Period Start Date from the Calendar
-        </p>
-        <Calendar
+        <p>Select Your Last Period Start Date from the Calendar</p>
+        {/* <Calendar
           onChange={onChange}
           value={value}
           className="flex justify-center flex-col items-center bg-pink/50"
-        />
+        /> */}
+
         <div className="text-center mt-4 p-2">
           <div className="row">
             <div className="flex justify-center">
-              <div className="">
+              <div className="m-3 bg-white drop-shadow-lg p-3 rounded-xl">
                 <p>Next Period</p>
-
-                {/* <Moment format="Do MMMM YYYY" add={{ days: cycleLength - 1 }}>
-                  {date}
-                </Moment> */}
+                <p>{nextPeriodDate}</p>
               </div>
-              <div className="">
+              <div className="m-3 bg-white drop-shadow-lg p-3 rounded-xl">
                 <p>Approximate Ovulation Day</p>
-
-                {/* <Moment
-                  format="Do MMMM YYYY"
-                  add={{ days: cycleLength - 1 - 14 }}
-                >
-                  {date}
-                </Moment> */}
+                <p>{ovulationDay}</p>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="flex flex-col items-center">
-          <h1>Current cycle:</h1>
-          <p className="text-2xl font-semibold">Day 20</p>
-          <p>Low chance of getting pregnant</p>
-          <AddPeriodModal
-            modalHeading="Log your period"
-            buttonText={<p>Log period</p>}
-            submitButton="Add"
-          />
+          <div className="flex flex-col items-center">
+            <h1>
+              <p>Next Period</p>
+            </h1>
+            <p className="text-2xl font-semibold">Day 20</p>
+            <p>Low chance of getting pregnant</p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,8 +1,7 @@
 import React from "react";
-import StatsInfo from "../../../components/StatsInfo";
-// import Button from "../../../components/Button";
 import { useNavigate } from "react-router-dom";
 import AddPeriodModal from "./AddPeriodModal";
+import StatsInfo from "./StatsInfo";
 
 const PeriodStats = () => {
   const navigate = useNavigate();
