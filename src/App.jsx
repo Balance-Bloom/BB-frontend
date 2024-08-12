@@ -14,6 +14,7 @@ import WelcomeMessage from "./pages/questions/WelcomeMessage";
 import FirstPage from "./pages/questions/FirstPage";
 import PeriodHistory from "./pages/user-dashboard/pages/PeriodHistory";
 import Sypmtoms from "./pages/user/pages/Sypmtoms";
+import ArticlesMain from "./pages/user/pages/ArticlesMain";
 
 function App() {
   const router = createBrowserRouter([
@@ -38,6 +39,11 @@ function App() {
       element: <UserPage />,
     },
     {
+      path: "/articles",
+      element: <ArticlesMain />,
+    },
+
+    {
       path: "/forum",
       element: <ForumPage />,
     },
@@ -59,6 +65,7 @@ function App() {
       path: "/next",
       element: <FirstPage />,
     },
+
     {
       path: "log-symptom",
       element: <Sypmtoms />,

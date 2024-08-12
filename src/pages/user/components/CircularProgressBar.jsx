@@ -24,22 +24,16 @@ const CircularProgressBar = () => {
             alignItems: "center",
           }}
         >
-          <h4
+          <p
             style={{
               paddingBottom: "12px",
+              fontWeight: "bold",
+              fontSize: "14px",
             }}
           >
-            <span
-              style={{
-                fontWeight: "bold",
-                fontSize: "14px",
-              }}
-            >
-              Today,
-            </span>
-            Day {value}
-          </h4>
-          <h1
+            Today, Day {value}
+          </p>
+          <p
             style={{
               textAlign: "center",
               fontWeight: "bolder",
@@ -47,7 +41,7 @@ const CircularProgressBar = () => {
             }}
           >
             Your next period is <br /> due in {value} days
-          </h1>
+          </p>
         </div>
       </CircularProgressbarWithChildren>
     </div>

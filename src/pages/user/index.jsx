@@ -1,32 +1,55 @@
 import React from "react";
-import PeriodStats from "./components/PeriodStats";
-import Insights from "./components/Insights";
-import Articles from "./components/Articles";
 import CircularProgressBar from "./components/CircularProgressBar";
-import AddPeriodModal from "./components/AddPeriodModal";
 import CalendarTile from "../user-dashboard/components/CalendarTile";
-import CycleGraph from "../user-dashboard/components/CycleGraph";
+import InsightCard from "../../components/InsightCard";
+import DashboardTile from "../user-dashboard/components/DashboardTile";
+import InfoNav from "../../components/InfoNav";
+import Articles from "./components/Articles";
 
 const UserPage = () => {
   return (
-    <>
-      <div className="">
-        <h1 className="text-2xl my-5 ml-4">Hello Jesslyn, Welcome back</h1>
-        <div className="flex max-w-7xl mx-auto gap-4">
-          <div className="flex flex-col justify-center items-center bg-white shadow-md p-5 rounded-lg">
-            <div className="pb-8">
+    <div className="min-h-screen bg-gray-50">
+      <h1 className="text-3xl font-semibold pt-10 mb-5">
+        Welcome back Jesslyn
+      </h1>
+      <div className="flex flex-col mb-4">
+        <h1>Insights</h1>
+        <div className="flex gap-5">
+          <InfoNav
+            bgColor=""
+            children={
+              <div className="">
+                <p className="text-center">Luteal phase</p>
+                <p className="text-center underline text-blue-500 cursor-pointer">
+                  Read more
+                </p>
+              </div>
+            }
+          />
+          <InfoNav />
+          <InfoNav />
+          <InfoNav />
+          <InfoNav />
+        </div>
+      </div>
+      <div className="flex flex-col gap-5">
+        <div className="flex">
+          <div className="flex flex-row md:grid-cols-2 gap-1 max-w-6xl mx-3 p-2">
+            <CalendarTile />
+            <div className="bg-white shadow-md flex justify-center items-center p-6 rounded-r-[6px]">
               <CircularProgressBar />
             </div>
           </div>
-          <CalendarTile />
-          <CycleGraph />
+          <InsightCard />
+          <div>
+            <DashboardTile />
+          </div>
         </div>
-        <div className="m-auto">
-          <Insights />
+        <div>
           <Articles />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

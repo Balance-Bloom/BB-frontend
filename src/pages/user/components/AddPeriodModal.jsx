@@ -11,7 +11,7 @@ const AddPeriodModal = ({
     <div>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       <button
-        className="px-4 bg-deepPink hover:text-white text-sm py-3  self-center rounded-lg uppercase font-medium tracking-wide transition-all hover:bg-black "
+        className="px-4 bg-deepPink hover:text-white text-base py-1  self-center rounded-full font-medium "
         onClick={() => document.getElementById("my_modal_5").showModal()}
       >
         {buttonText || "Open Modal"}

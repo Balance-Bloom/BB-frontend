@@ -53,6 +53,69 @@ const D = {
       },
     ],
   },
+  INSIGHTS: [
+    {
+      title: "Cervical Cancer",
+    },
+    {
+      title: "Cervical Cancer",
+    },
+    {
+      title: "Cervical Cancer",
+    },
+    {
+      title: "Cervical Cancer",
+    },
+  ],
+  INSIGHTLINKS: [
+    {
+      linkName: "Discover",
+    },
+    {
+      linkName: "Reproductive health",
+    },
+    {
+      linkName: "Birth Control",
+    },
+    {
+      linkName: "Relationships",
+    },
+    {
+      linkName: "Sex and intimacy",
+    },
+    {
+      linkName: "Intimacy",
+    },
+    {
+      linkName: "Relationships",
+    },
+    {
+      linkName: "Mental health",
+    },
+  ],
+  ARTICLESMAIN: [
+    {
+      sectionName: "Reproductive Health",
+    },
+    {
+      sectionName: "Reproductive Health",
+    },
+    {
+      sectionName: "Reproductive Health",
+    },
+    {
+      sectionName: "Reproductive Health",
+    },
+    {
+      sectionName: "Reproductive Health",
+    },
+    {
+      sectionName: "Reproductive Health",
+    },
+    {
+      sectionName: "Reproductive Health",
+    },
+  ],
 };
 
 export default D;

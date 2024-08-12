@@ -90,3 +90,14 @@
   height: inherit;
   width: inherit;
 }
+
+/* Article */
+.articleBg {
+  background-image: url(../src/assets/images/cervical-cancer.avif);
+  background-position: center;
+}
+
+.articleOverlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: inherit;
+}
