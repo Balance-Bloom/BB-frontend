@@ -100,13 +100,13 @@ class CycleGraph extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="bg-white shadow-md">
         <div id="chart" className="">
           <ReactApexChart
             options={this.state.options}
             series={this.state.series}
             type="line"
-            height={400}
+            height={390}
             width={700}
           />
           <div id="html-dist"></div>

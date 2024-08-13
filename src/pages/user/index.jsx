@@ -12,17 +12,20 @@ const UserPage = () => {
     <div className="min-h-screen pt-3 bg-gray-50 ">
       <Header />
       <Top />
-      <div className="grid grid-cols-3 gap-5 pt-5 items-start">
+      <h1 className="text-lg font-bold text-black">Period Tracking</h1>
+      <div className="grid grid-cols-3 gap-5 pt-5 pb-10 items-start">
         <div className="col-span-2">
-          <div className="flex space-x-4">
-            <TrackingSection className="p-8" />
+          <div className="flex space-x-4 items-center content-center">
+            <TrackingSection className="pt-8" />
             <div className="">
               <CycleGraph />
             </div>
           </div>
-          <Insights />
         </div>
-        {/* <Mood /> */}
+      </div>
+      <div className="flex flex-row justify-between">
+        <Insights />
+        <Mood />
       </div>
     </div>
   );

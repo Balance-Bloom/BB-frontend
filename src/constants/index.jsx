@@ -4,6 +4,7 @@ import {
   HomeIcon,
   UserIcon,
 } from "@heroicons/react/20/solid";
+import { GiPadlock } from "react-icons/gi";
 import { GraduationCapIcon, Medal } from "lucide-react";
 
 const D = {
@@ -114,6 +115,199 @@ const D = {
     },
     {
       sectionName: "Reproductive Health",
+    },
+  ],
+  VAGINALDISCHARGE: [
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
+        />
+      ),
+      text: "No discharge",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
+        />
+      ),
+      text: "Creamy",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
+        />
+      ),
+      text: "Watery",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
+        />
+      ),
+      text: "Sticky",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
+        />
+      ),
+      text: "Egg white",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
+        />
+      ),
+      text: "Spotting",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
+        />
+      ),
+      text: "Unusual",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
+        />
+      ),
+      text: "Clumpy white",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Gray",
+    },
+  ],
+  FEELINGS: [
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Everything is fine",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Cramps",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Tender breasts",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Headache",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Acne",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Backache",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Fatigue",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Cravings",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Insomnia",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Abdominal pain",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Vaginal itching",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Vaginal dryness",
     },
   ],
 };

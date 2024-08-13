@@ -3,8 +3,6 @@ import { SmileIcon } from "lucide-react";
 import { CalendarDateRangeIcon } from "@heroicons/react/20/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVenusMars } from "@fortawesome/free-solid-svg-icons/faVenusMars";
-import { BsArrowRightShort } from "react-icons/bs";
-import { PlusCircleIcon } from "@heroicons/react/20/solid";
 import LogSymptomModal from "./LogSymptomModal";
 
 const InsightCard = () => {

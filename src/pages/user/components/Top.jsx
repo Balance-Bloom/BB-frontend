@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Top = () => {
   return (
-    <div className="topsection ">
+    <div className="topsection pb-20">
       <div className="flex justify-between pt-9 gap-1">
         <div className="relative h-60 flex-col justify-center flex p-3 rounded-2xl overflow-hidden">
           <h1
