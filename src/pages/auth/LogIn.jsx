@@ -20,7 +20,6 @@ const LogIn = () => {
 
   return (
     <>
-      <NavBar />
       <div className="flex justify-center h-screen items-center bg-daisy">
         <div className="w-[450px] p-8 bg-pink rounded-lg shadow-lg flex flex-col items-center gap-8">
           <h1 className="font-bold text-lg">Welcome back!</h1>

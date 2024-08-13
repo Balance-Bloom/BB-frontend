@@ -14,7 +14,7 @@ class CycleGraph extends React.Component {
       ],
       options: {
         chart: {
-          height: 350,
+          height: 300,
           type: "line",
           zoom: {
             enabled: false,
@@ -100,13 +100,14 @@ class CycleGraph extends React.Component {
 
   render() {
     return (
-      <div>
-        <div id="chart">
+      <div className="bg-white shadow-md">
+        <div id="chart" className="">
           <ReactApexChart
             options={this.state.options}
             series={this.state.series}
             type="line"
-            height={350}
+            height={390}
+            width={700}
           />
           <div id="html-dist"></div>
         </div>

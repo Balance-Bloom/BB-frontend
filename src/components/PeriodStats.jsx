@@ -1,7 +1,7 @@
 import React from "react";
-import StatsInfo from "../../../components/StatsInfo";
-import Button from "../../../components/Button";
 import { useNavigate } from "react-router-dom";
+import AddPeriodModal from "./AddPeriodModal";
+import StatsInfo from "./StatsInfo";
 
 const PeriodStats = () => {
   const navigate = useNavigate();
@@ -9,16 +9,18 @@ const PeriodStats = () => {
   return (
     <>
       <h1>My cycles</h1>
-      <div className="bg-pink/50 rounded-lg shadow-md w-80 p-3">
+      <div className=" rounded-lg bg-white shadow-md w-80 flex flex-col items-center">
         <div className="mb-5">
           <StatsInfo />
           <StatsInfo />
           <StatsInfo />
           <StatsInfo border="border-none" />
         </div>
-        <Button
-          buttonText="Analysis"
-          onClick={() => navigate("/welcome-message")}
+        <AddPeriodModal
+          modalHeading="Log Your Period"
+          buttonText="Log period"
+          modalButtonAction=""
+          submitButton="Add period"
         />
       </div>
     </>
