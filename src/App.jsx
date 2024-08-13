@@ -14,8 +14,7 @@ import WelcomeMessage from "./pages/questions/WelcomeMessage";
 import FirstPage from "./pages/questions/FirstPage";
 import PeriodHistory from "./pages/user-dashboard/pages/PeriodHistory";
 import ArticlesMain from "./pages/user/pages/ArticlesMain";
-import Symptoms from "./components/Symptoms";
-
+import Sypmtoms from "./pages/user/components/Sypmtoms";
 function App() {
   const router = createBrowserRouter([
     {
@@ -68,7 +67,7 @@ function App() {
 
     {
       path: "log-symptom",
-      element: <Symptoms />,
+      element: <Sypmtoms />,
     },
     {
       path: "dashboard",

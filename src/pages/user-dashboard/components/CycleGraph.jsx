@@ -14,7 +14,7 @@ class CycleGraph extends React.Component {
       ],
       options: {
         chart: {
-          height: 350,
+          height: 300,
           type: "line",
           zoom: {
             enabled: false,

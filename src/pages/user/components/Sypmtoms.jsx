@@ -1,13 +1,13 @@
 import React from "react";
-import SymptomTile from "../components/SymptomTile";
-import NavBar from "../components/NavBar";
 import { FaceFrownIcon } from "@heroicons/react/24/outline";
-import MaterialCalendar from "../components/MaterialCalendar";
+import SymptomTile from "../../../components/SymptomTile";
+import NavBar from "../../../components/NavBar";
+import MaterialCalendar from "../../../components/MaterialCalendar";
 
-const Symptoms = () => {
+const Sypmtoms = () => {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="flex flex-row justify-center">
         <div className="py-14 flex flex-col gap-4">
           <h1 className="text-xl">Categories</h1>
@@ -90,4 +90,4 @@ const Symptoms = () => {
   );
 };
 
-export default Symptoms;
+export default Sypmtoms;
