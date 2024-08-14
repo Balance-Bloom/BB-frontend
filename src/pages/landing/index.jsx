@@ -10,8 +10,11 @@ const LandingPage = () => {
     <>
       <NavBar />
       <Hero />
-      <Features />
-      <Features2 />
+      <div className="bg-gradient-to-b from-[#E39580] to-[#FAFAFA]">
+        <Features />
+        <Features2 />
+      </div>
+
       <Footer />
     </>
   );

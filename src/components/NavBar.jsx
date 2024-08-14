@@ -5,11 +5,11 @@ import { IoMdSpeedometer } from "react-icons/io";
 
 const NavBar = ({}) => {
   return (
-    <div>
+    <div className="z-10 bg-white">
       <nav className="flex justify-between p-2 px-5 font-sans items-center border-b-2">
-        <div className="w-[8%]">
+        {/* <div className="w-[8%]">
           <img src={Logo} alt="" />
-        </div>
+        </div> */}
         <ul className="flex gap-3 text-base ">
           <li>
             <Link className="hover:text-deepPink">

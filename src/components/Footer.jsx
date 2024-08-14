@@ -4,7 +4,7 @@ import Logo from "../assets/logo/no-bg-2.jpg";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-center bg-pink/45 text-primary-content p-10">
+      <footer className="footer footer-center bg-pink/45 text-primary-content p-10 z-10">
         <aside>
           <img src={Logo} alt="Bloom and Balance Logo" className="w-1/2" />
           <p className="font-bold text-[#756578]">
