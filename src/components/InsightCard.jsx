@@ -1,139 +1,77 @@
 import React from "react";
-import { SmileIcon } from "lucide-react";
-import { CalendarDateRangeIcon } from "@heroicons/react/20/solid";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faVenusMars } from "@fortawesome/free-solid-svg-icons/faVenusMars";
-import LogSymptomModal from "./LogSymptomModal";
+import { useNavigate } from "react-router-dom";
+import Cramps from "../assets/images/cramps1.jpeg";
+import Cravings from "../assets/images/cravings.jpg";
+import MoodSwings from "../assets/images/mood-swings.webp";
+import { BsArrowRightShort } from "react-icons/bs";
+import BigButton from "./BigButton";
 
 const InsightCard = () => {
+  const navigate = useNavigate();
+
+  const handleLogSymptom = () => {
+    navigate("/log-symptom");
+  };
+
   return (
-    <div className="secContainer grid items-center flex-basis mt-8">
-      <div className="w-full justify-center rounded-lg flex flex-col pb-6 px-6">
-        {/* <h1 className="font-sans font-semibold mb-4">
-          Today's mood or symptoms
-        </h1> */}
-        <div className="grid items-center secContainer gap-2 ">
-          <div className="single customer items-center justify-between text-fuchsia-600 text-sm flex">
-            <div>
-              <FontAwesomeIcon
-                icon={faVenusMars}
-                size="2x"
-                color="#c026d3"
-                // width={20}
-                className="text-fuchsia-600 inline bg-fuchsia-200 rounded-[50%] p-3 mr-3 "
+    <div className="flex flex-col justify-center shadow-lg p-8 rounded-lg bg-white">
+      <div className="w-full text-center pb-6">
+        <h2 className="text-3xl font-bold mb-4 text-gray-800">
+          Menstrual Cycle Insights
+        </h2>
+        <p className="mb-6 text-md text-gray-600">
+          Understanding your symptoms can help you manage your menstrual cycle
+          more effectively. Track your symptoms, and we'll provide insights to
+          help you better understand your body.
+        </p>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="flex flex-col items-center">
+            <div className="relative">
+              <img
+                src={Cramps}
+                alt="Cramps"
+                className="rounded-lg hover:shadow-lg transition-all"
               />
-            </div>
-            <div className=" customerDetails flex justify-between flex-1">
-              <span className="text-base font-semibold block">
-                Sex and sex drive
+              <span className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 rounded-t-lg">
+                Cramps
               </span>
-              <div className="duration font-medium">
-                <LogSymptomModal />
-              </div>
             </div>
           </div>
-          <div className="text-deepPink text-sm single customer items-center justify-between flex">
-            <div>
-              <SmileIcon
-                size={60}
-                className="text-deepPink inline bg-pink  rounded-[50%] p-3 mr-3 "
+          <div className="flex flex-col items-center">
+            <div className="relative">
+              <img
+                src={MoodSwings}
+                alt="Mood Swings"
+                className="rounded-lg hover:shadow-lg transition-all"
               />
-            </div>
-            <div className=" customerDetails flex justify-between flex-1">
-              <span className="text-base font-semibold block">Mood</span>
-              <div className="duration font-medium">
-                <LogSymptomModal />
-              </div>
+              <span className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 rounded-t-lg">
+                Mood swings
+              </span>
             </div>
           </div>
-          <div className="text-coral text-sm single customer items-center justify-between flex">
-            <div>
-              <CalendarDateRangeIcon
-                width={60}
-                className="text-coral inline bg-coral/50  rounded-[50%] p-3 mr-3"
+          <div className="flex flex-col items-center">
+            <div className="relative">
+              <img
+                src={Cravings}
+                alt="Cravings"
+                className="rounded-lg hover:shadow-lg transition-all"
               />
+              <span className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 rounded-t-lg">
+                Cravings
+              </span>
             </div>
-            <div className=" customerDetails flex justify-between flex-1">
-              <span className="text-base font-semibold block">Symptoms</span>
-              <div className="duration font-medium">
-                <LogSymptomModal />
-              </div>
-            </div>
+            <button
+              className="flex items-center text-deepPink border border-transparent hover:border-deepPink transition-all px-4 py-2 rounded-lg hover:shadow-lg mt-2"
+              aria-label="See all insights"
+            >
+              See All Insights <BsArrowRightShort className="ml-2" />
+            </button>
           </div>
-          <div className="text-coral text-sm single customer items-center justify-between flex">
-            <div>
-              <CalendarDateRangeIcon
-                width={60}
-                className="text-coral inline bg-coral/50  rounded-[50%] p-3 mr-3"
-              />
-            </div>
-            <div className=" customerDetails flex justify-between flex-1">
-              <span className="text-base font-semibold block">Symptoms</span>
-              <div className="duration font-medium">
-                <LogSymptomModal />
-              </div>
-            </div>
-          </div>
-          <div className="text-coral text-sm single customer items-center justify-between flex">
-            <div>
-              <CalendarDateRangeIcon
-                width={60}
-                className="text-coral inline bg-coral/50  rounded-[50%] p-3 mr-3"
-              />
-            </div>
-            <div className=" customerDetails flex justify-between flex-1">
-              <span className="text-base font-semibold block">Symptoms</span>
-              <div className="duration font-medium">
-                <LogSymptomModal />
-              </div>
-            </div>
-          </div>
-          <div className="text-coral text-sm single customer items-center justify-between flex">
-            <div>
-              <CalendarDateRangeIcon
-                width={60}
-                className="text-coral inline bg-coral/50  rounded-[50%] p-3 mr-3"
-              />
-            </div>
-            <div className=" customerDetails flex justify-between flex-1">
-              <span className="text-base font-semibold block">Symptoms</span>
-              <div className="duration font-medium">
-                <LogSymptomModal />
-              </div>
-            </div>
-          </div>
-          <div className="text-coral text-sm single customer items-center justify-between flex">
-            <div>
-              <CalendarDateRangeIcon
-                width={60}
-                className="text-coral inline bg-coral/50  rounded-[50%] p-3 mr-3"
-              />
-            </div>
-            <div className=" customerDetails flex justify-between flex-1">
-              <span className="text-base font-semibold block">Symptoms</span>
-              <div className="duration font-medium">
-                <LogSymptomModal />
-              </div>
-            </div>
-          </div>
-          {/* <div className="text-coral text-sm">
-            <CalendarDateRangeIcon
-              width={25}
-              className="text-coral inline bg-coral/50 rounded-[100%] p-1 mr-3"
-            />
-            Vaginal Discharge
-          </div>
-          <div className="text-coral text-sm">
-            <CalendarDateRangeIcon
-              width={25}
-              className="text-coral inline bg-coral/50 rounded-[100%] p-1 mr-3"
-            />
-            Pregnancy test
-          </div> */}
         </div>
-        {/* Heading above the icon */}
-        <h3 className="text-center"></h3>
-        {/* <LogSymptomModal /> */}
+      </div>
+
+      <div className="flex justify-center">
+        <BigButton onClick={handleLogSymptom} buttonText="Log symptom" />
       </div>
     </div>
   );

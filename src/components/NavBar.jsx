@@ -12,15 +12,17 @@ const NavBar = ({}) => {
         </div> */}
         <ul className="flex gap-3 text-base ">
           <li>
-            <Link className="hover:text-deepPink">
+            <Link to="feature-section" className="hover:text-deepPink">
               <span>Home</span>
             </Link>
           </li>
           <li>
-            <Link className="hover:text-deepPink">My Insights</Link>
+            <Link className="hover:text-deepPink">Features</Link>
           </li>
           <li>
-            <Link className="hover:text-deepPink">Articles</Link>
+            <Link to="/articles" className="hover:text-deepPink">
+              Articles
+            </Link>
           </li>
         </ul>
       </nav>

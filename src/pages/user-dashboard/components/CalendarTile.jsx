@@ -11,11 +11,11 @@ import AddPeriodModal from "../../../components/AddPeriodModal";
 
 const CalendarTile = () => {
   return (
-    <div className="w-56 h-[400px] rounded-l-[6px] shadow-md bg-white flex flex-col items-center gap-7 pt-3">
+    <div className="w-full col-span-1 h-[400px] rounded-l-[6px] shadow-md bg-white flex flex-col items-center gap-16 p-10 justify-center">
       <div className="flex flex-col gap-6">
-        <p>
+        <p className="flex justify-between w-full">
           <ArrowLeft />
-          February 2018
+          <span>February 2018</span>
           <ArrowRight />
         </p>
         <div className="flex flex-col gap-3">
@@ -42,7 +42,7 @@ const CalendarTile = () => {
           </p>
         </div>
       </div>
-      <div className="mt-36">
+      <div className="">
         <AddPeriodModal buttonText="Log period" />
       </div>
     </div>

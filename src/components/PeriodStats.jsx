@@ -7,9 +7,9 @@ const PeriodStats = () => {
   const navigate = useNavigate();
 
   return (
-    <>
-      <h1>My cycles</h1>
-      <div className=" rounded-lg bg-white shadow-md w-80 flex flex-col items-center">
+    <div className="grid bg-white p-10 shadow-md w-full col-span-1">
+      <h1 className="font-bold">My cycles</h1>
+      <div className="   flex flex-col ">
         <div className="mb-5">
           <StatsInfo />
           <StatsInfo />
@@ -23,7 +23,7 @@ const PeriodStats = () => {
           submitButton="Add period"
         />
       </div>
-    </>
+    </div>
   );
 };
 

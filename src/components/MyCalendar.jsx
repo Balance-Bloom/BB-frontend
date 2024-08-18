@@ -1,6 +1,9 @@
-import moment from "moment";
 import React, { useState } from "react";
+import moment from "moment";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 import "../App.css";
+import AddPeriodModal from "./AddPeriodModal"; // Import the AddPeriodModal component
 
 const MyCalendar = () => {
   const [value, onChange] = useState(new Date());
@@ -18,61 +21,87 @@ const MyCalendar = () => {
     .add(cycleLength - 14, "days")
     .format("Do MMMM YYYY");
 
-  return (
-    <div className="bg-white rounded-lg shadow-md mt-7 pb-9">
-      <div className="w-full min-w-80">
-        <label htmlFor="">Select your cycle length</label>
-        <select
-          className="m-2"
-          onChange={(e) => cycleValue(e.target.value)}
-          defaultValue={cycle}
-        >
-          <option value="28">28</option>
-          <option value="29">29</option>
-          <option value="30">30</option>
-          <option value="31">31</option>
-          <option value="32">32</option>
-          <option value="33">33</option>
-          <option value="34">34</option>
-          <option value="35">35</option>
-          <option value="36">36</option>
-          <option value="37">37</option>
-          <option value="38">38</option>
-          <option value="39">39</option>
-          <option value="40">40</option>
-          <option value="41">41</option>
-          <option value="42">42</option>
-          <option value="43">43</option>
-          <option value="44">44</option>
-          <option value="45">45</option>
-        </select>
-        <p>Select Your Last Period Start Date from the Calendar</p>
-        {/* <Calendar
-          onChange={onChange}
-          value={value}
-          className="flex justify-center flex-col items-center bg-pink/50"
-        /> */}
+  // Example logged periods (these could be fetched from a database)
+  const loggedPeriods = [moment(value).subtract(28, "days").toDate(), value];
 
-        <div className="text-center mt-4 p-2">
-          <div className="row">
-            <div className="flex justify-center">
-              <div className="m-3 bg-white drop-shadow-lg p-3 rounded-xl">
-                <p>Next Period</p>
-                <p>{nextPeriodDate}</p>
+  const tileContent = ({ date, view }) => {
+    if (
+      view === "month" &&
+      loggedPeriods.find((d) => moment(d).isSame(date, "day"))
+    ) {
+      return <div className="dot"></div>;
+    }
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    // Handle form submission here, e.g., save the period data
+    console.log("Form submitted");
+  };
+
+  return (
+    <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg shadow-xl p-6 mt-7 max-w-lg mx-auto">
+      <div className="w-full">
+        <label
+          htmlFor="cycleLength"
+          className="block text-xl font-bold text-gray-700 mb-2"
+        >
+          Select Your Cycle Length
+        </label>
+        <select
+          id="cycleLength"
+          className="w-full p-3 border border-gray-300 rounded-lg mb-4 bg-white text-gray-800 shadow-sm"
+          onChange={(e) => cycleValue(e.target.value)}
+          value={cycle}
+        >
+          {[...Array(18).keys()].map((i) => (
+            <option key={i} value={i + 28}>
+              {i + 28}
+            </option>
+          ))}
+        </select>
+        <p className="mb-4 text-lg text-gray-600">
+          Select Your Last Period Start Date from the Calendar
+        </p>
+        <div className="flex justify-center mb-4">
+          <Calendar
+            onChange={onChange}
+            value={value}
+            className="bg-white border border-gray-300 rounded-lg shadow-lg"
+            tileContent={tileContent}
+          />
+        </div>
+
+        <div className="text-center mt-4">
+          <div className="flex justify-center mb-4">
+            <div className="m-3 bg-white shadow-lg p-4 rounded-lg w-48 flex flex-col items-center">
+              <div className="bg-gradient-to-r from-green-400 to-blue-500 p-2 rounded-full mb-2">
+                {/* SVG removed */}
               </div>
-              <div className="m-3 bg-white drop-shadow-lg p-3 rounded-xl">
-                <p>Approximate Ovulation Day</p>
-                <p>{ovulationDay}</p>
+              <p className="font-semibold text-gray-800">Next Period</p>
+              <p className="text-xl font-bold text-gray-900">
+                {nextPeriodDate}
+              </p>
+            </div>
+            <div className="m-3 bg-white shadow-lg p-4 rounded-lg w-48 flex flex-col items-center">
+              <div className="bg-gradient-to-r from-yellow-400 to-red-500 p-2 rounded-full mb-2">
+                {/* SVG removed */}
               </div>
+              <p className="font-semibold text-gray-800">
+                Approximate Ovulation Day
+              </p>
+              <p className="text-xl font-bold text-gray-900">{ovulationDay}</p>
             </div>
           </div>
-          <div className="flex flex-col items-center">
-            <h1>
-              <p>Next Period</p>
-            </h1>
-            <p className="text-2xl font-semibold">Day 20</p>
-            <p>Low chance of getting pregnant</p>
-          </div>
+
+          {/* Add Period Button */}
+          <AddPeriodModal
+            modalButtonAction={() => {}}
+            buttonText="Log Period"
+            modalHeading="Log Your Period"
+            submitButton="Add"
+            onSubmit={handleFormSubmit}
+          />
         </div>
       </div>
     </div>
