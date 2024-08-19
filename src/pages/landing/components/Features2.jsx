@@ -4,7 +4,7 @@ import DiaryImage from "../../../assets/images/diary-removebg-preview.png";
 import HealthInsightImage from "../../../assets/images/heartbeat-removebg-preview.png";
 import SymptomImage from "../../../assets/images/symptom-removebg.png";
 import ForumImage from "../../../assets/images/forum-removebg-preview.png";
-import GynaeImage from "../../../assets/images/gynae.jpg";
+import GynaeImage from "../../../assets/images/gynae-removebg-preview.png";
 
 const Features2 = () => {
   return (

@@ -5,11 +5,12 @@ import Logo from "../../assets/logo/original-removebg-preview.png";
 import { apiLogin } from "../../services/auth";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
-import { Loader } from "lucide-react";
+import { Loader, Eye, EyeOff } from "lucide-react";
 import InputForm from "../../components/InputForm";
 
 const LogIn = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // Add this state
   console.log(isSubmitting);
   const navigate = useNavigate();
 
@@ -45,7 +46,7 @@ const LogIn = () => {
       }, 500);
     } catch (error) {
       console.log(error);
-      toast.error("An error occured");
+      toast.error("An error occurred");
     } finally {
       setIsSubmitting(false);
     }
@@ -70,15 +71,26 @@ const LogIn = () => {
                 required: true,
               })}
             />
-            {errors.email && <p>Email is required</p>}
+            {errors.email && (
+              <p className="text-sm text-red-500">Email is required</p>
+            )}
           </div>
           <div className="relative w-full">
             <InputForm
-              type="password"
+              type={showPassword ? "text" : "password"} // Toggle type here
               placeholder="Password"
               {...register("password", { required: true })}
             />
-            {errors.password && <p>Password is required</p>}
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-600"
+            >
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            </button>
+            {errors.password && (
+              <p className="text-sm text-red-500">Password is required</p>
+            )}
           </div>
           <Link
             to="/recovery"
