@@ -11,12 +11,6 @@ const Header = () => {
       <div className="flex justify-between">
         <div className="flex items-center">
           <img src={Logo} alt="" className="w-1/6" />
-          <div className="title pl-7">
-            <h1 className="text-xl text-black font-bold">
-              Welcome to Bloom & Balance
-            </h1>
-            <p className="text-lg font-medium"> Hello Jesslyn, Welcome back!</p>
-          </div>
         </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center bg-white rounded-lg gap-4 px-2 py-4 w-96">

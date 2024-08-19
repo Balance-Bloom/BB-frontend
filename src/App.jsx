@@ -69,6 +69,7 @@ function App() {
       path: "log-symptom",
       element: <Sypmtoms />,
     },
+
     {
       path: "dashboard",
       element: <DashboardLayout />,

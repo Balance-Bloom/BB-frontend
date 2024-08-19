@@ -102,11 +102,6 @@
   height: inherit;
 }
 
-.calendar {
-  margin: 30px auto 20px auto;
-  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
-}
-
 abbr[title] {
   text-decoration: none;
 }
@@ -121,4 +116,161 @@ abbr[title] {
   left: 0;
   bottom: 0;
   border-radius: 2px;
+}
+
+/* insight card animation */
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.flip-animation {
+  display: inline-block;
+  animation: flip 5s ease-in-out infinite; /* Slowed down to 5 seconds */
+  perspective: 1000px; /* To ensure 3D effect */
+}
+
+/* react calendar */
+/* Custom styles for the Calendar */
+.react-calendar {
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  max-width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.react-calendar__tile--active {
+  background-color: #ffddc1 !important;
+  color: #333 !important;
+}
+
+.react-calendar__tile--now {
+  background-color: #ffb6b9 !important;
+  color: white !important;
+}
+
+.react-calendar__tile:hover {
+  background-color: #f8a5c2 !important;
+  color: white !important;
+}
+
+/* Adjust the text in the calendar */
+.react-calendar__month-view__days__day {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Styling for the navigation buttons */
+.react-calendar__navigation button {
+  color: #ff7a89;
+  font-size: 1rem;
+}
+
+/* Styling for the calendar header */
+.react-calendar__month-view__weekdays {
+  font-size: 1rem;
+  color: #666;
+}
+
+.react-calendar__tile .dot {
+  height: 6px;
+  width: 6px;
+  background-color: red;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* calendar styles */
+
+/* Calendar Header */
+.css-1aqny2q-MuiPickersCalendarHeader-root {
+  background-color: #ff6f91;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem; /* Ensure the header text is legible */
+}
+
+/* Calendar Tiles */
+.MuiPickersDay-root {
+  padding: 10px;
+  border-radius: 50%;
+  position: relative; /* Needed for positioning the badge */
+  transition: background-color 0.2s ease;
+}
+
+/* Active Day */
+.MuiPickersDay-root.Mui-selected {
+  background-color: #ff7a89 !important;
+  color: white !important;
+  border-radius: 50%;
+}
+
+/* Current Day */
+.MuiPickersDay-root.MuiPickersDay-today {
+  border: 1px solid #ff7a89; /* Highlight the current day */
+  color: #ff7a89 !important;
+}
+
+/* Hover Effect on Days */
+.MuiPickersDay-root:hover {
+  background-color: #ffb6b9 !important;
+  color: white !important;
+}
+
+/* Days of Week */
+.MuiPickersCalendarHeader-weekDayLabel {
+  color: deepPink;
+  font-weight: bold;
+}
+
+/* Navigation Buttons */
+.MuiPickersArrowSwitcher-button {
+  color: white;
+  font-size: 1.2rem;
+  background-color: #ff7a89;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.MuiPickersArrowSwitcher-button.Mui-disabled {
+  background-color: #ffd1dc;
+}
+
+.MuiPickersArrowSwitcher-button:hover {
+  background-color: #ff4d6d;
+}
+
+/* Badge Style */
+.badge {
+  background-color: red; /* Color of the badge */
+  color: white;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* Position it within the day cell */
+  top: 3px; /* Adjust positioning to sit above the day number */
+  right: 3px;
+  z-index: 1; /* Ensure the badge is above the day number */
+}
+
+/* Calendar Container */
+.calendar {
+  padding: 20px;
+  max-width: 600px;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
 }

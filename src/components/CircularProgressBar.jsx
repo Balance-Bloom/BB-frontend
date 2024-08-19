@@ -46,7 +46,7 @@ const CircularProgressBar = () => {
               fontSize: "14px",
             }}
           >
-            Today,{" "}
+            Today,
             <span className="text-sm font-normal">
               {moment().format("MMM Do")}
             </span>

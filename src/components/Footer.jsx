@@ -1,14 +1,14 @@
 import React from "react";
-import Logo from "../assets/logo/no-bg-2.jpg";
+import Logo from "../assets/logo/original-removebg-preview.png";
 
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-center bg-pink/45 text-primary-content p-10">
+      <footer className="footer footer-center bg-pink/45 text-primary-content p-10 z-10">
         <aside>
           <img src={Logo} alt="Bloom and Balance Logo" className="w-1/2" />
           <p className="font-bold text-[#756578]">
-            ACME Industries Ltd.
+            Bloom and balance
             <br />
             Providing reliable tech since 1992
           </p>

@@ -7,9 +7,9 @@ import CircularProgressBar from "../../../components/CircularProgressBar";
 const TrackingSection = () => {
   return (
     <div className="">
-      <div className="flex md:grid-cols-2 gap-1 max-w-6xl mx-3 p-2">
+      <div className="grid grid-cols-3 gap-1  mx-3 ">
         <CalendarTile />
-        <div className="bg-white shadow-md flex justify-center items-center p-6 rounded-r-[6px]">
+        <div className="bg-white col-span-2 shadow-md flex justify-center items-center p-6 rounded-r-[6px]">
           <CircularProgressBar />
         </div>
       </div>

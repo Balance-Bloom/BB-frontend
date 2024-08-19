@@ -8,6 +8,7 @@ import SexDrive from "../../../components/SexDrive";
 import Moods from "../../../components/Moods";
 import Feelings from "../../../components/Feelings";
 import VaginalDischarge from "../../../components/VaginalDischarge";
+import Digestion from "../../../components/Digestion";
 
 const Sypmtoms = () => {
   return (
@@ -20,6 +21,7 @@ const Sypmtoms = () => {
           <Moods />
           <Feelings />
           <VaginalDischarge />
+          <Digestion />
         </div>
       </div>
     </>
