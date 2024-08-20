@@ -5,8 +5,8 @@ const Features = () => {
     <div className="py-20 flex justify-center">
       <div className=" w-[952px] h-auto  ">
         <p className="text-5xl mb-4">
-          Grace's 8.3MB app gives women in low-resource settings access to
-          affordable health services
+          Bloom and Balance provides free reproductive health resources to women
+          from menarche to menopause.
         </p>
         <p>✓ Tailored Access Programs</p>
         <p>✓ Interactive Health Coaching</p>

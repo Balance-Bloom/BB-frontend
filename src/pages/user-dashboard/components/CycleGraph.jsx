@@ -14,7 +14,7 @@ class CycleGraph extends React.Component {
       ],
       options: {
         chart: {
-          height: 350,
+          height: 300,
           type: "line",
           zoom: {
             enabled: false,
@@ -26,10 +26,11 @@ class CycleGraph extends React.Component {
         stroke: {
           curve: "smooth",
         },
-        title: {
-          text: "Cycle Trends",
-          align: "left",
-        },
+        // title: {
+        //   text: "Cycle Trends",
+        //   align: "left",
+
+        // },
         grid: {
           row: {
             colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
@@ -100,13 +101,14 @@ class CycleGraph extends React.Component {
 
   render() {
     return (
-      <div>
-        <div id="chart">
+      <div className="bg-white shadow-md col-span-2">
+        <div id="chart" className="">
           <ReactApexChart
             options={this.state.options}
             series={this.state.series}
             type="line"
-            height={350}
+            height={390}
+            width={750}
           />
           <div id="html-dist"></div>
         </div>

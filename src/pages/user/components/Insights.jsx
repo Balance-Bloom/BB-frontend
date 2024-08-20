@@ -1,33 +1,24 @@
 import React from "react";
+import { BsArrowRightShort } from "react-icons/bs";
+import { AiFillHeart, AiOutlineCalendar } from "react-icons/ai";
+import { IoMdHappy, IoMdSad } from "react-icons/io";
+import LogSymptomModal from "../../../components/LogSymptomModal"; // Ensure this component is correctly implemented
+import CardOfInsights from "./CardOfInsights";
+import SectionOfInsights from "../../../components/SectionOfInsights";
 import InsightCard from "../../../components/InsightCard";
-import { PlusCircleIcon } from "@heroicons/react/20/solid";
-import { useNavigate } from "react-router-dom";
+
 const Insights = () => {
-  const navigate = useNavigate();
-
   return (
-    <div className="p-24">
-      <h1 className="font-sans font-semibold mb-4">My Insights . Today</h1>
-      <div className="flex justify-center gap-5">
-        <InsightCard
-          heading="Log your symptoms"
-          icon={
-            <PlusCircleIcon
-              width={40}
-              className="text-fuschia"
-              onClick={() => navigate("/log-symptom")}
-            />
-          }
-          styles="gap-6 text-sm"
-        />
+    <div className=" p-6 bg-gray-50">
+      {/* Heading Section */}
+      <div className="heading flex w-full justify-between items-center mb-6">
+        <h1 className="text-2xl font-bold text-gray-800">Period Insights</h1>
+      </div>
 
-        <InsightCard />
-        <InsightCard />
-        <InsightCard />
-        <InsightCard />
-        <InsightCard />
-
-        <InsightCard />
+      {/* Insights Container */}
+      <div className="gap-6">
+        {/* Insight Item: Mood Tracking */}
+        <SectionOfInsights />
       </div>
     </div>
   );

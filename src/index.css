@@ -1,3 +1,103 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+@keyframes rotated {
+  0% {
+    transform: rotate (0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main_slider_three_img {
+  animation: rotated 10s infinite linear;
+}
+
+@keyframes treemove {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(0);
+    transform: rotate(0deg) translateX(0);
+  }
+  75% {
+    -webkit-transform: rotate(5deg) translateX(10px);
+    transform: rotate(5deg) translateX(10px);
+  }
+  50% {
+    -webkit-transform: rotate(10deg) translateX(20px);
+    transform: rotate(5deg) translateX(20px);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main-slider-three_leaf_one {
+  animation: movebounce1 3s linear infinite;
+}
+
+.main-slider-three_leaf_two {
+  animation: movebounce1 3s linear infinite;
+}
+.main-slider-three_leaf_text {
+  animation: textRotate 15s linear 0s forwards infinite alternate;
+}
+
+.hoverImg {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+
+.hoverImg:hover {
+  transform: scale(1.2);
+}
+
+.transition-bg {
+  transition: 0.5s all ease-in-out;
+}
+
+.offer_card {
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+}
+
+.why-choose-three__item:nth-child(1),
+.why-choose-three__item:nth-child(2) {
+  border-bottom: 2px solid #ffffff33;
+}
+
+.why-choose-three__item:nth-child(1),
+.why-choose-three__item:nth-child(3) {
+  border-right: 1px solid #ffffff33;
+}
+
+@media screen and (max-width: 768px) {
+  .why-choose-three__item {
+    border-bottom: 2px solid #ffffff33;
+  }
+  .why-choose-three__item:nth-child(4) {
+    border: none;
+  }
+}

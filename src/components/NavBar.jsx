@@ -1,42 +1,99 @@
-import React from "react";
+import React, { useState } from "react";
+import { HiMenuAlt3, HiSearch } from "react-icons/hi";
+import { IoMdClose } from "react-icons/io";
+import Logo from "../assets/logo/original-removebg-preview.png";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ border, navLink1, navLink2, navLink3 }) => {
+const NavBar = () => {
+  const [dropDown, setDropDown] = useState(false);
+
+  const showDropDown = () => {
+    setDropDown(!dropDown);
+  };
+
   return (
-    <div className={`navbar bg-base-100 ${border}`}>
-      <div className="flex-1">
-        <Link to="/" className="btn btn-ghost text-xl">
-          B&B
-        </Link>
-      </div>
-      <div className="flex-none gap-2">
-        <div className="dropdown dropdown-end">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-10 rounded-full">
-              <img alt="Avatar" src="" />
-            </div>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-          >
-            <li>
-              <Link className="justify-between">{navLink1}</Link>
-            </li>
-            <li>
-              <Link>{navLink2}</Link>
-            </li>
-            <li>
-              <Link>{navLink3}</Link>
-            </li>
+    <nav className="w-full lg:pb-8 flex flex-col justify-center items-center lg:relative sticky top-0 z-50 lg:bg-transparent bg-white">
+      <div className="container mx-auto lg:w-full w-[95%]">
+        <div className="flex items-center justify-between border-b border-[#e8e3da] lg:w-4/5 w-full mx-auto py-4">
+          <img src={Logo} alt="" width={80} />
+          <span className="flex items-center gap-8">
+            {dropDown ? (
+              <div
+                onClick={showDropDown}
+                className="lg:hidden text-[22px] cursor-pointer"
+              >
+                <IoMdClose />
+              </div>
+            ) : (
+              <div
+                onClick={showDropDown}
+                className="lg:hidden text-[22px] cursor-pointer"
+              >
+                <HiMenuAlt3 />
+              </div>
+            )}
+            <HiSearch size={24} />
+            <button className="lg:block hidden bg-deepPink text-white text-[10px] font-semibold px-[29px] py-[11px] transition-bg hover:bg-pink">
+              GET STARTED
+            </button>
+          </span>
+        </div>
+        <div className="lg:w-full mx-auto h-full lg:flex hidden justify-center gap-16 items-center pt-8">
+          <ul className="flex items-center xl:gap-12 gap-x-4 max-lg:hidden">
+            <a
+              href="#"
+              className="leading-normal no-underline text-sm hover:text-deepPink"
+            >
+              HOME
+            </a>
+            <a
+              href="#"
+              className="leading-normal no-underline text-sm hover:text-deepPink"
+            >
+              SERVICES
+            </a>
+            <a
+              href="#"
+              className="leading-normal no-underline text-sm hover:text-deepPink"
+            >
+              PRODUCT
+            </a>
+            <a
+              href="#"
+              className="leading-normal no-underline text-sm hover:text-deepPink"
+            >
+              TESTIMONIAL
+            </a>
+            <a
+              href="#"
+              className="leading-normal no-underline text-sm hover:text-deepPink"
+            >
+              TEAM
+            </a>
+            <a
+              href="#"
+              className="leading-normal no-underline text-sm hover:text-deepPink"
+            >
+              Blog
+            </a>
           </ul>
         </div>
+        {dropDown && (
+          <div className="lg:hidden w-full h-full px-6 fixed top-24 bg-white transition-all ">
+            <div className="w-full flex flex-col items-baseline gap-4">
+              <ul className="flex flex-col justify-center w-full">
+                <a href="#">HOME</a>
+                <a href="#">SERVICES</a>
+                <a href="#">PRODUCT</a>
+                <a href="#">TESTIMONIAL</a>
+                <a href="#">TEAM</a>
+                <a href="#">Blog</a>
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
-    </div>
+    </nav>
   );
 };
 

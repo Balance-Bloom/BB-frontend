@@ -1,6 +1,4 @@
 import React from "react";
-import RingImage from "../assets/svg/ring.svg";
-import EllipseImage from "../assets/svg/ellipse.svg";
 
 const JournalTile = () => {
   return (

@@ -8,15 +8,15 @@ import UserPage from "./pages/user";
 import ForumPage from "./pages/forum";
 import Journal from "./pages/journal";
 import ViewEntries from "./components/ViewEntries";
-import JournalEntryCard from "./components/JournalEntryCard";
 import DashboardLayout from "./pages/user-dashboard/layouts";
 import OverviewPage from "./pages/user-dashboard/pages/OverviewPage";
 import WelcomeMessage from "./pages/questions/WelcomeMessage";
 import FirstPage from "./pages/questions/FirstPage";
-import SypmtomsPage from "./pages/user-dashboard/pages/SymptomsPage";
 import PeriodHistory from "./pages/user-dashboard/pages/PeriodHistory";
 import Posts from "./components/post";
 
+import ArticlesMain from "./pages/user/pages/ArticlesMain";
+import Sypmtoms from "./pages/user/components/Sypmtoms";
 function App() {
   const router = createBrowserRouter([
     {
@@ -40,6 +40,11 @@ function App() {
       element: <UserPage />,
     },
     {
+      path: "/articles",
+      element: <ArticlesMain />,
+    },
+
+    {
       path: "/forum",
       element: <ForumPage />,
     },
@@ -61,6 +66,12 @@ function App() {
       path: "/next",
       element: <FirstPage />,
     },
+
+    {
+      path: "log-symptom",
+      element: <Sypmtoms />,
+    },
+
     {
       path: "/blog",
       element: < Posts/>,
@@ -77,10 +88,7 @@ function App() {
           index: true,
           element: <OverviewPage />,
         },
-        {
-          path: "log-symptom",
-          element: <SypmtomsPage />,
-        },
+
         {
           path: "period-history",
           element: <PeriodHistory />,
