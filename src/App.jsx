@@ -15,6 +15,7 @@ import WelcomeMessage from "./pages/questions/WelcomeMessage";
 import FirstPage from "./pages/questions/FirstPage";
 import SypmtomsPage from "./pages/user-dashboard/pages/SymptomsPage";
 import PeriodHistory from "./pages/user-dashboard/pages/PeriodHistory";
+import Posts from "./components/post";
 
 function App() {
   const router = createBrowserRouter([
@@ -55,6 +56,14 @@ function App() {
     {
       path: "/welcome-message",
       element: <WelcomeMessage />,
+    },
+    {
+      path: "/next",
+      element: <FirstPage />,
+    },
+    {
+      path: "/blog",
+      element: < Posts/>,
     },
     {
       path: "/next",
