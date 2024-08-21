@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../../App.css";
 import { Link, useNavigate } from "react-router-dom";
 import InputForm from "../../components/InputForm";
-import Logo from "../../assets/logo/original-removebg-preview.png";
+import Logo from "../../assets/logo/logo.png";
 import { useForm } from "react-hook-form";
 import { apiCheckUserNameExists, apiSignUp } from "../../services/auth";
 import { debounce } from "lodash";

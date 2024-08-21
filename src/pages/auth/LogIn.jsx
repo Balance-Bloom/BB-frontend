@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../App.css";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../../assets/logo/original-removebg-preview.png";
+import Logo from "../../assets/logo/logo.png";
 import { apiLogin } from "../../services/auth";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";

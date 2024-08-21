@@ -4,6 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        heroBg: '#f9bbe2',
+        para: 'rgb(0, 0 /80%)',
+        primary: '#babaff',
         lilac: "#C1AFE3",
         fuschia: "#C03882",
         pink: "#FFCFDB",
