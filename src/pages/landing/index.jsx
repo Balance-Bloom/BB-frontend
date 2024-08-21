@@ -2,10 +2,14 @@ import React, { useEffect } from "react";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Hero from "./components/Hero";
+import Navigation from "./components/Navigation";
+import Services from "./components/Services";
 import Features from "./components/Features";
 import Features2 from "./components/Features2";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Blog from "./components/Blog";
+import Testimonials from "./components/Testimonials";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -14,15 +18,13 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <>
-      <NavBar />
-      <Hero />
-      <div className="bg-gradient-to-b from-pink to-[#FAFAFA]">
-        {/* <Features />
-        <Features2 /> */}
-      </div>
-      {/* <Footer /> */}
-    </>
+    <div className="font-primary overflow-x-hidden">
+      <Navigation />
+      <Hero/>
+      <Services/>
+      <Blog/>
+      <Testimonials/>
+    </div>
   );
 };
 

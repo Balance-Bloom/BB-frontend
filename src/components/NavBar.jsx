@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiMenuAlt3, HiSearch } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
-import Logo from "../assets/logo/original-removebg-preview.png";
+import Logo from "../assets/logo/logo.png";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
