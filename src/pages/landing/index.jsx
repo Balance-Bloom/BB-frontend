@@ -18,6 +18,7 @@ const LandingPage = () => {
   }, []);
 
   return (
+
     <div className="font-primary overflow-x-hidden">
       <Navigation />
       <Hero/>
@@ -25,6 +26,7 @@ const LandingPage = () => {
       <Blog/>
       <Testimonials/>
     </div>
+
   );
 };
 

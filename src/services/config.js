@@ -11,18 +11,14 @@ export const getDetails = () => {
   const user = {};
 
   user.token = localStorage.getItem("accessToken");
-  user.firstName = localStorage.getItem("firstName");
-  user.lastName = localStorage.getItem("lastName");
-  user.username = localStorage.getItem("username");
+  user.name = localStorage.getItem("username");
 
   return user;
 };
 
 export const clearDetails = () => {
   localStorage.removeItem("accessToken");
-  localStorage.removeItem("firstName");
-  localStorage.removeItem("lastName");
-  localStorage.removeItem("userName");
+  localStorage.removeItem("username");
 };
 
 // Interceptor to add token to authorization header for every request
@@ -50,12 +46,12 @@ apiClient.interceptors.response.use(
   },
   (error) => {
     // If there is an error in the response (like 401) handle it here
-    if (error.response.status === 401) {
-      // remove accessToken from local storage
-      clearDetails();
-      // Handle 401 erroor(eg, logout user and redirect to login page)
-      window.location.replace("/login");
-    }
+    // if (error.response.status === 401) {
+    //   // remove accessToken from local storage
+    //   clearDetails();
+    //   // Handle 401 erroor(eg, logout user and redirect to login page)
+    //   window.location.replace("/login");
+    // }
     if (error.response.status === 404) {
       toast.error("Not found");
     }

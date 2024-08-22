@@ -2,15 +2,23 @@ import React from "react";
 import Video from "../../../assets/videos/period-tracking.mp4";
 import "../../../App.css";
 import { Link } from "react-router-dom";
+import { getDetails } from "../../../services/config";
+import _ from "lodash";
 
 const Top = () => {
+  const { name } = getDetails();
+  const capitalizedName = _.capitalize(name);
+
   return (
     <div className="topsection  flex flex-col gap-10">
       <div className="title">
         <h1 className="text-3xl text-black font-bold">
           Welcome to Bloom & Balance
         </h1>
-        <p className="text-lg font-medium"> Hello Jesslyn, Welcome back!</p>
+        <p className="text-lg font-medium">
+          {" "}
+          Hello {_.capitalize(name)}, Welcome back!
+        </p>
       </div>
       <div className="relative w-full h-60 flex-col justify-center flex p-10 items-center rounded-2xl overflow-hidden">
         <h1
@@ -28,7 +36,7 @@ const Top = () => {
         <div className="gap-1 flex items-center mt-4">
           <Link
             to="/articles"
-            className="shadow-none p-2 rounded-lg bg-white text-deepPink z-[100] "
+            className="shadow-none p-2 rounded-lg bg-white text-deepPink z-[100] hover:bg-pink hover:text-white"
           >
             Explore more
           </Link>

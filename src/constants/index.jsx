@@ -4,56 +4,11 @@ import {
   HomeIcon,
   UserIcon,
 } from "@heroicons/react/20/solid";
-import { GiPadlock } from "react-icons/gi";
 import { GraduationCapIcon, Medal } from "lucide-react";
-
+import { GiPadlock } from "react-icons/gi";
+import { GiPadlockOpen } from "react-icons/gi";
+import { IoMdHeartDislike } from "react-icons/io";
 const D = {
-  DASHBOARDLINKS: [
-    {
-      name: "Overview",
-      path: "",
-      Icon: <UserIcon width={20} height={20} />,
-    },
-    {
-      name: "Mood and symptoms",
-      path: "log-symptom",
-      Icon: <UserIcon width={20} height={20} />,
-    },
-    {
-      name: "Period history",
-      path: "period-history",
-      Icon: <GraduationCapIcon width={20} height={20} />,
-    },
-    {
-      name: "Track pregnancy",
-      path: "licenses",
-      Icon: <CreditCardIcon width={20} height={20} />,
-    },
-  ],
-  SYMPTOMS: {
-    MOOD: [
-      {
-        id: 1,
-        emoji: "🤒",
-        name: "Fever",
-      },
-      {
-        id: 2,
-        emoji: "🤕",
-        name: "Headache",
-      },
-      {
-        id: 3,
-        emoji: "🤧",
-        name: "Sneezing",
-      },
-      {
-        id: 4,
-        emoji: "😴",
-        name: "Fatigue",
-      },
-    ],
-  },
   INSIGHTS: [
     {
       title: "Cervical Cancer",
@@ -125,51 +80,6 @@ const D = {
           className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
         />
       ),
-      text: "No discharge",
-    },
-    {
-      icon: (
-        <GiPadlock
-          size={30}
-          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
-        />
-      ),
-      text: "Creamy",
-    },
-    {
-      icon: (
-        <GiPadlock
-          size={30}
-          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
-        />
-      ),
-      text: "Watery",
-    },
-    {
-      icon: (
-        <GiPadlock
-          size={30}
-          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
-        />
-      ),
-      text: "Sticky",
-    },
-    {
-      icon: (
-        <GiPadlock
-          size={30}
-          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
-        />
-      ),
-      text: "Egg white",
-    },
-    {
-      icon: (
-        <GiPadlock
-          size={30}
-          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4]"
-        />
-      ),
       text: "Spotting",
     },
     {
@@ -198,6 +108,24 @@ const D = {
         />
       ),
       text: "Gray",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Vaginal itching",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#8f69e1]  p-1 rounded-full bg-[#DED3F4] "
+        />
+      ),
+      text: "Vaginal dryness",
     },
   ],
   FEELINGS: [
@@ -308,6 +236,117 @@ const D = {
         />
       ),
       text: "Vaginal dryness",
+    },
+  ],
+  SEXDRIVE: [
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: " Protected sex",
+    },
+    {
+      icon: (
+        <GiPadlockOpen
+          size={25}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: "Unprotected sex",
+    },
+    {
+      icon: (
+        <IoMdHeartDislike
+          size={25}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: "Didn't have sex ",
+    },
+    {
+      icon: (
+        <IoMdHeartDislike
+          size={25}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: "Oral sex ",
+    },
+    {
+      icon: (
+        <IoMdHeartDislike
+          size={25}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: " Anal sex",
+    },
+
+    {
+      icon: (
+        <IoMdHeartDislike
+          size={25}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: "Masturbation",
+    },
+    {
+      icon: (
+        <IoMdHeartDislike
+          size={25}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: "Sensual touch",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: "Sex toys",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: "Orgasm",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: "High sex drive",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: "Neutral sex drive",
+    },
+    {
+      icon: (
+        <GiPadlock
+          size={30}
+          className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
+        />
+      ),
+      text: "Low sex drive",
     },
   ],
 };

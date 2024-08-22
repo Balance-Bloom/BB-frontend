@@ -16,12 +16,12 @@ const PeriodStats = () => {
           <StatsInfo />
           <StatsInfo border="border-none" />
         </div>
-        <AddPeriodModal
+        {/* <AddPeriodModal
           modalHeading="Log Your Period"
           buttonText="Log period"
           modalButtonAction=""
           submitButton="Add period"
-        />
+        /> */}
       </div>
     </div>
   );

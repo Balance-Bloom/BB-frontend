@@ -23,9 +23,7 @@ const LogIn = () => {
 
   const addToLocalStorage = (accessToken, user) => {
     localStorage.setItem("accessToken", accessToken);
-    localStorage.setItem("firstName", user.firstName);
-    localStorage.setItem("lastName", user.lastName);
-    localStorage.setItem("username", user.username);
+    localStorage.setItem("username", user);
   };
 
   const onSubmit = async (data) => {
@@ -39,7 +37,7 @@ const LogIn = () => {
       });
       console.log(res.data);
 
-      addToLocalStorage(res.data.accessToken, res.data.user);
+      addToLocalStorage(res.data.token, res.data.user.name);
       toast.success("Login successful");
       setTimeout(() => {
         navigate("/user-page");

@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { GiPadlock } from "react-icons/gi";
 import { GiPadlockOpen } from "react-icons/gi";
 import { IoMdHeartDislike } from "react-icons/io";
+import D from "../constants";
 
 const SexDrive = () => {
+  // State to keep track of selected items (multiple selections)
+  const [selectedSexDrive, setSelectedSexDrive] = useState([]);
+
+  // Funtion to handle the selection of an item
+  const handleSelect = (sexDrive) => {
+    if (selectedSexDrive.includes(sexDrive)) {
+      // If sexDrive is already selected remove it form the selection
+      setSelectedSexDrive(selectedSexDrive.filter((item) => item !== sexDrive));
+    } else {
+      // If sex drive is not selected, add it to the selection
+      setSelectedSexDrive([...selectedSexDrive, sexDrive]);
+    }
+  };
   return (
     <>
       <div className=" bg-white drop-shadow-xl rounded-xl items-center flex-col justify-between p-4 ">
@@ -12,101 +26,118 @@ const SexDrive = () => {
             Sex and sex drive
           </p>
         </div>
+
         <div className="flex flex-col gap-6">
           <div className="flex gap-2">
-            <div className="flex font-medium bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-full shadow hover:bg-[#FDE2E2] cursor-pointer transition">
-              <GiPadlock
-                size={30}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Protected sex
-            </div>
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <GiPadlockOpen
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Unprotected sex
-            </div>
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <IoMdHeartDislike
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Didn't have sex
-            </div>
+            {D.SEXDRIVE.slice(0, 3).map((item, index) => {
+              const isSelected = selectedSexDrive.includes(item);
+              return (
+                <button
+                  key={index}
+                  onClick={() => handleSelect(item)}
+                  className={`flex font-medium bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-full shadow hover:bg-[#FDE2E2] cursor-pointer transition  ${
+                    isSelected
+                      ? "bg-white border-[1px] text-[#EC4F4E]"
+                      : "bg-[#F4F0FE] border-transparent"
+                  }`}
+                >
+                  {item.icon}
+                  {item.text}
+                </button>
+              );
+            })}
           </div>
+
           <div className="flex gap-1">
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <IoMdHeartDislike
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Oral sex
-            </div>
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <IoMdHeartDislike
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Anal sex
-            </div>
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <IoMdHeartDislike
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Masturbation
-            </div>
+            {D.SEXDRIVE.slice(3, 6).map((item, index) => {
+              const isSelected = selectedSexDrive.includes(item);
+
+              return (
+                <button
+                  onClick={() => handleSelect(item)}
+                  className={`flex font-medium bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-full shadow hover:bg-[#FDE2E2] cursor-pointer transition  ${
+                    isSelected
+                      ? "bg-white border-[1px] text-[#EC4F4E]"
+                      : "bg-[#F4F0FE] border-transparent"
+                  }`}
+                >
+                  {item.icon}
+                  {item.text}
+                </button>
+              );
+            })}
           </div>
 
           <div className="flex gap-2">
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <IoMdHeartDislike
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Sensual touch
-            </div>
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <IoMdHeartDislike
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Sex toys
-            </div>
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <IoMdHeartDislike
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Orgasm
-            </div>
+            {D.SEXDRIVE.slice(6, 9).map((item, index) => {
+              const isSelected = selectedSexDrive.includes(item);
+
+              return (
+                <button
+                  onClick={() => handleSelect(item)}
+                  className={`flex font-medium bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-full shadow hover:bg-[#FDE2E2] cursor-pointer transition  ${
+                    isSelected
+                      ? "bg-white border-[1px] text-[#EC4F4E]"
+                      : "bg-[#FAC7CA] border-transparent"
+                  }`}
+                >
+                  {item.icon}
+                  {item.text}
+                </button>
+              );
+            })}
           </div>
+
           <div className="flex gap-4">
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <IoMdHeartDislike
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              High sex drive
+            {D.SEXDRIVE.slice(9, 12).map((item, index) => {
+              const isSelected = selectedSexDrive.includes(item);
+
+              return (
+                <button
+                  onClick={() => handleSelect(item)}
+                  className={`flex font-medium bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-full shadow hover:bg-[#FDE2E2] cursor-pointer transition  ${
+                    isSelected
+                      ? "bg-white border-[1px] text-[#EC4F4E]"
+                      : "bg-[#F4F0FE] border-transparent"
+                  }`}
+                >
+                  {item.icon}
+                  {item.text}
+                </button>
+              );
+            })}
+          </div>
+          {/* Display the button only if there are selected items */}
+          {selectedSexDrive.length > 0 && (
+            <div className="mt-4 flex justify-center items-center">
+              <button
+                className="w-1/2 bg-deepPink text-white py-2 rounded-lg hover:shadow-lg transition"
+                // onClick={}
+              >
+                Proceed
+              </button>
             </div>
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <IoMdHeartDislike
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Neutral sex drive
-            </div>
-            <div className="flex shadow hover:bg-[#FDE2E2] transition bg-[#FDEDED] px-2 items-center text-sm gap-1 rounded-3xl">
-              <IoMdHeartDislike
-                size={25}
-                className="text-[#EC4F4E] bg-[#FAC7CA] p-1 rounded-full"
-              />
-              Low sex drive
+          )}
+        </div>
+        {/* Display the selected items at the bottom in a fixed grid */}
+        {selectedSexDrive.length > 0 && (
+          <div className="mt-4 bg-gray-100 p-4 rounded-lg">
+            <h3 className="text-base font-semibold mb-2">
+              Selected Sex drive:
+            </h3>
+            <div className="grid grid-cols-3 gap-4">
+              {selectedSexDrive.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center bg-white px-3 py-1 rounded-full shadow"
+                >
+                  {item.icon}
+                  <span className="ml-2">{item.text}</span>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   );
