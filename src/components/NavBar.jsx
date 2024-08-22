@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { HiMenuAlt3, HiSearch } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import Logo from "../assets/logo/original-removebg-preview.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [dropDown, setDropDown] = useState(false);
+  const navigate = useNavigate();
 
   const showDropDown = () => {
     setDropDown(!dropDown);
@@ -33,61 +34,46 @@ const NavBar = () => {
               </div>
             )}
             <HiSearch size={24} />
-            <button className="lg:block hidden bg-deepPink text-white text-[10px] font-semibold px-[29px] py-[11px] transition-bg hover:bg-pink">
-              GET STARTED
+            <button
+              onClick={() => navigate("login")}
+              className="lg:block hidde bg-deepPink text-white text-[10px] font-semibold px-[29px] py-[11px] hover:bg-pink"
+            >
+              LOG IN
             </button>
           </span>
         </div>
         <div className="lg:w-full mx-auto h-full lg:flex hidden justify-center gap-16 items-center pt-8">
           <ul className="flex items-center xl:gap-12 gap-x-4 max-lg:hidden">
-            <a
-              href="#"
-              className="leading-normal no-underline text-sm hover:text-deepPink"
-            >
+            <Link className="leading-normal no-underline text-sm text-white hover:text-deepPink">
               HOME
-            </a>
-            <a
-              href="#"
-              className="leading-normal no-underline text-sm hover:text-deepPink"
-            >
-              SERVICES
-            </a>
-            <a
-              href="#"
-              className="leading-normal no-underline text-sm hover:text-deepPink"
-            >
-              PRODUCT
-            </a>
-            <a
-              href="#"
-              className="leading-normal no-underline text-sm hover:text-deepPink"
-            >
-              TESTIMONIAL
-            </a>
-            <a
-              href="#"
-              className="leading-normal no-underline text-sm hover:text-deepPink"
-            >
+            </Link>
+            <Link className="leading-normal no-underline text-sm text-white hover:text-deepPink">
+              ABOUT US
+            </Link>
+            <Link className="leading-normal no-underline text-sm text-white hover:text-deepPink">
+              FEATURES
+            </Link>
+            <Link className="leading-normal no-underline text-sm text-white hover:text-deepPink">
+              CONTACT US
+            </Link>
+            {/* <Link className="leading-normal no-underline text-sm hover:text-deepPink">
               TEAM
-            </a>
-            <a
-              href="#"
-              className="leading-normal no-underline text-sm hover:text-deepPink"
-            >
-              Blog
-            </a>
+            </Link>
+            <Link className="leading-normal no-underline text-sm hover:text-deepPink">
+              BLOG
+            </Link> */}
           </ul>
         </div>
         {dropDown && (
           <div className="lg:hidden w-full h-full px-6 fixed top-24 bg-white transition-all ">
             <div className="w-full flex flex-col items-baseline gap-4">
               <ul className="flex flex-col justify-center w-full">
-                <a href="#">HOME</a>
-                <a href="#">SERVICES</a>
-                <a href="#">PRODUCT</a>
-                <a href="#">TESTIMONIAL</a>
-                <a href="#">TEAM</a>
-                <a href="#">Blog</a>
+                <Link>HOME</Link>
+                <Link>SERVICES</Link>
+                <Link>PRODUCT</Link>
+                <Link>TESTIMONIAL</Link>
+                <Link>TEAM</Link>
+                <Link>Blog</Link>
               </ul>
             </div>
           </div>
