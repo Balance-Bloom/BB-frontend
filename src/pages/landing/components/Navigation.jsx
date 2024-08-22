@@ -84,7 +84,7 @@ const Navigation = () => {
           Services
         </motion.a>
       </li>
-      <li>
+      {/* <li>
         <motion.a
           whileHover={{ Scale: 1.1 }}
           whileTop={{ Scale: 0.9 }}
@@ -115,7 +115,7 @@ const Navigation = () => {
         >
           Blog
         </motion.a>
-      </li>
+      </li> */}
       <li>
         <motion.a
           whileHover={{ Scale: 1.1 }}
