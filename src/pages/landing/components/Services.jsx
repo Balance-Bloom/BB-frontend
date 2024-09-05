@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import '../../../App.css'
@@ -96,8 +97,7 @@ const Services = () => {
                     </Tabs>
                 </div>
             </div>
-        </div>
-    )
-}
+  );
+};
 
-export default Services
+export default Services;
