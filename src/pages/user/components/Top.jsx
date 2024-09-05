@@ -16,7 +16,6 @@ const Top = () => {
           Welcome to Bloom & Balance
         </h1>
         <p className="text-lg font-medium">
-          {" "}
           Hello {_.capitalize(name)}, Welcome back!
         </p>
       </div>
