@@ -23,8 +23,9 @@ const LandingPage = () => {
       <Navigation />
       <Hero/>
       <Services/>
-      <Blog/>
+      {/* <Blog/> */}
       <Testimonials/>
+      <Footer/>
     </div>
 
   );
