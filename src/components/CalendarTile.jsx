@@ -10,9 +10,9 @@ import {
 } from "@mui/icons-material";
 import { Droplet } from "lucide-react";
 import { CalendarDateRangeIcon } from "@heroicons/react/20/solid";
-import AddPeriodModal from "../../../components/AddPeriodModal";
 import { green, red } from "@mui/material/colors";
 import { toast } from "react-toastify";
+import AddPeriodModal from "./AddPeriodModal";
 
 const CalendarTile = () => {
   const initialPeriodData = {

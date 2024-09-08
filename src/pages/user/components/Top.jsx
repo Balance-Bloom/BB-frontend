@@ -19,6 +19,7 @@ const Top = () => {
           Hello {_.capitalize(name)}, Welcome back!
         </p>
       </div>
+
       <div className="relative w-full h-60 flex-col justify-center flex p-10 items-center rounded-2xl overflow-hidden">
         <h1
           className="z-[100] text-xl font-medium text-white"
@@ -39,9 +40,6 @@ const Top = () => {
           >
             Explore more
           </Link>
-          {/* <button className="shadow-none p-2 bg-none border-2 rounded-lg border-pink text-pink hover:bg-deepPink hover:text-white z-[100]">
-              Top sellers
-            </button> */}
         </div>
         <div className="absolute h-full w-full top-0 right-0 bottom-0 left-0 ">
           <video

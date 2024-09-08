@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PMS from "../assets/images/diet-img.jpg";
 
-const SectionOfInsights = () => {
+const InsightTile = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -67,4 +67,4 @@ const SectionOfInsights = () => {
   );
 };
 
-export default SectionOfInsights;
+export default InsightTile;

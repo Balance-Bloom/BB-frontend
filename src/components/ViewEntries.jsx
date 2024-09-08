@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import JournalEntryCard from "../components/JournalEntryCard";
-import ChatNav from "./ChatNav";
 
 const ViewEntries = () => {
   const [entries, setEntries] = useState([
@@ -21,7 +20,6 @@ const ViewEntries = () => {
 
   return (
     <>
-      <ChatNav />
       <div className="min-h-screen bg-daisy p-8">
         <h1 className="text-3xl font-bold mb-6">My Journal Entries</h1>
         <div className="grid grid-cols-1 gap-4">
