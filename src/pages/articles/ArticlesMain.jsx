@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import D from "../../../constants";
-import MyCalendar from "../../../components/MyCalendar";
+import D from "../../constants";
+import MyCalendar from "../../components/MyCalendar";
 
 const ArticlesMain = () => {
   const [selectedInsight, setSelectedInsight] = useState(null);

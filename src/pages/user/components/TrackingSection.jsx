@@ -1,8 +1,6 @@
 import React from "react";
-import DashboardTile from "../../user-dashboard/components/DashboardTile";
-import InsightCard from "../../../components/InsightCard";
-import CalendarTile from "../../user-dashboard/components/CalendarTile";
 import CircularProgressBar from "../../../components/CircularProgressBar";
+import CalendarTile from "../../../components/CalendarTile";
 
 const TrackingSection = () => {
   return (

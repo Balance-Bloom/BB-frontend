@@ -10,7 +10,7 @@ const ForumPage = () => {
       <FilterBar />
       <div className="">
         {/* <img src={ForumHero} alt="color splash" className="h-1/5 w-full" /> */}
-        <ForumFirstSec />
+        <ForumFirstSec className="" />
       </div>
     </div>
   );

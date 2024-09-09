@@ -5,16 +5,13 @@ import LogIn from "./pages/auth/LogIn";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import SignUp from "./pages/auth/SignUp";
 import UserPage from "./pages/user";
-import ForumPage from "./pages/forum";
 import Journal from "./pages/journal";
+import ForumPage from "./pages/forum";
 import ViewEntries from "./components/ViewEntries";
-import DashboardLayout from "./pages/user-dashboard/layouts";
-import OverviewPage from "./pages/user-dashboard/pages/OverviewPage";
 import WelcomeMessage from "./pages/questions/WelcomeMessage";
 import FirstPage from "./pages/questions/FirstPage";
-import PeriodHistory from "./pages/user-dashboard/pages/PeriodHistory";
-import ArticlesMain from "./pages/user/pages/ArticlesMain";
 import Sypmtoms from "./pages/user/components/Sypmtoms";
+import ArticlesMain from "./pages/articles/ArticlesMain";
 function App() {
   const router = createBrowserRouter([
     {
@@ -24,6 +21,10 @@ function App() {
     {
       path: "/login",
       element: <LogIn />,
+    },
+    {
+      path: "/forum-page",
+      element: <ForumPage />,
     },
     {
       path: "/recovery",
@@ -40,11 +41,6 @@ function App() {
     {
       path: "/articles",
       element: <ArticlesMain />,
-    },
-
-    {
-      path: "/forum",
-      element: <ForumPage />,
     },
     {
       path: "/journal",
@@ -68,22 +64,6 @@ function App() {
     {
       path: "log-symptom",
       element: <Sypmtoms />,
-    },
-
-    {
-      path: "dashboard",
-      element: <DashboardLayout />,
-      children: [
-        {
-          index: true,
-          element: <OverviewPage />,
-        },
-
-        {
-          path: "period-history",
-          element: <PeriodHistory />,
-        },
-      ],
     },
   ]);
 
